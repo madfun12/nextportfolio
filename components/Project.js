@@ -10,6 +10,7 @@ export default function Project(props){
                 <Image src={props.img}
                     width={290}
                     height={150}
+                    alt=''
                 />
             </div>
             <h2>{props.title}</h2>

@@ -20,7 +20,7 @@ export default function Home() {
             <p>I'm a web developer with a passion to help people expand their company's brand and to provide their customers with an unforgettable experience.</p>
             <Link href="/contact">Get in touch</Link>
           </div>
-          <Image src="/../public/heroimage.png" width={440} height={450} className={styles.heroImage}/>
+          <Image src="/../public/heroimage.png" width={440} height={450} className={styles.heroImage} alt=''/>
         </div>
         <section id='tech' className={`${styles.tech} ${styles.flexColumnCenter}`}>
           <h2>What I work with</h2>

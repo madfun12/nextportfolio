@@ -6,7 +6,7 @@ export default function TechCard(props){
         <div className={styles.techCard}>
               <span className={styles.flexRow}>
               <div className={`${styles.techCardPic} ${styles.flexColumnCenter}`}>
-                <Image src={props.img} height={40} width={40} objectFit='contain'/>
+                <Image src={props.img} height={40} width={40} objectFit='contain' alt='Project Image'/>
               </div>
               <h3>{props.title}</h3>
               </span>

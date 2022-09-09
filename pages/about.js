@@ -21,6 +21,7 @@ export default function About(){
                         src='/../public/madisonchill.jpeg'
                         height={400}
                         width={250}
+                        alt=''
                     />
                 </div>
             </section>
@@ -32,6 +33,7 @@ export default function About(){
                             height={200}
                             width={300}
                             src='/../public/SanFranPics/1.JPG'
+                            alt=''
                         />
                     </div>
                     <div className={styles.img}>
@@ -39,6 +41,7 @@ export default function About(){
                             height={300}
                             width={200}
                             src='/../public/SanFranPics/2.JPG'
+                            alt=''
                         />
                     </div>
                     <div className={styles.img}>
@@ -46,6 +49,7 @@ export default function About(){
                             height={300}
                             width={200}
                             src='/../public/SanFranPics/3.JPG'
+                            alt=''
                         />
                     </div>
                     <div className={styles.img}>
@@ -53,42 +57,49 @@ export default function About(){
                             height={300}
                             width={200}
                             src='/../public/SanFranPics/4.JPG'
+                            alt=''
                         />
                     </div><div className={styles.img}>
                         <Image
                             height={200}
                             width={300}
                             src='/../public/SanFranPics/5.JPG'
+                            alt=''
                         />
                     </div><div className={styles.img}>
                         <Image
                             height={300}
                             width={200}
                             src='/../public/SanFranPics/6.JPG'
+                            alt=''
                         />
                     </div><div className={styles.img}>
                         <Image
                             height={300}
                             width={200}
                             src='/../public/SanFranPics/7.JPG'
+                            alt=''
                         />
                     </div><div className={styles.img}>
                         <Image
                             height={300}
                             width={200}
                             src='/../public/SanFranPics/8.JPG'
+                            alt=''
                         />
                     </div><div className={styles.img}>
                         <Image
                             height={300}
                             width={200}
                             src='/../public/SanFranPics/9.JPG'
+                            alt=''
                         />
                     </div><div className={styles.img}>
                         <Image
                             height={300}
                             width={200}
                             src='/../public/SanFranPics/10.JPG'
+                            alt=''
                         />
                     </div>
                     <div className={styles.img}>
@@ -96,6 +107,7 @@ export default function About(){
                             height={300}
                             width={200}
                             src='/../public/SanFranPics/11.JPG'
+                            alt=''
                         />
                     </div>
                 </div>

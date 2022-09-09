@@ -16,13 +16,13 @@ export default function Contact(){
 
                     </div>
                     <form action="https://formsubmit.co/madfun12@gmail.com" method="POST">
-                        <label for="name">Full Name</label>
+                        <label htmlFor="name">Full Name</label>
                         <input id="name" type="text" name="name" placeholder="Required" required/>
-                        <label for="email">E-mail</label>
+                        <label htmlFor="email">E-mail</label>
                         <input type="email" name="email" placeholder="Required" required/>
-                        <label for="phone">Phone Number</label>
+                        <label htmlFor="phone">Phone Number</label>
                         <input type="phone" name="phone"/>
-                        <label for="message">Message</label>
+                        <label htmlFor="message">Message</label>
                         <textarea name="message" required/>
                         <button type="submit">Let's talk</button>
                     </form>    
