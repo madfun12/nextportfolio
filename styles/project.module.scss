@@ -1,0 +1,54 @@
+.project{
+    display: flex;
+    flex-direction: column;
+    color: rgb(26, 26, 26);
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.4);
+    max-width: 360px;
+    height: 400px;
+    margin: 20px;
+    position: relative;
+
+    .imageHolder{
+        background-image: url(../public/abstractbg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 356px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h2{
+        text-align: left;
+    color: rgb(26, 26, 26);
+        margin: 10px 0;
+        font-size: 2rem;
+    }
+    p{
+        width: 80%;
+        color: rgb(98, 98, 98);
+    }
+    a{
+        color: rgb(0, 119, 255);
+        text-decoration: none;
+        font-weight: 700;
+        border: 3px solid rgb(0, 119, 255);
+        border-radius: 10px;
+        width: fit-content;
+        margin: 10px 0;
+        padding: 10px 20px;
+        transition: 100ms;
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+    }
+    a:hover{
+        background-color: rgb(88, 88, 88);
+        color: white;
+        border: 3px solid rgb(89, 89, 89);
+    }
+}

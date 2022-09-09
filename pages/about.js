@@ -1,0 +1,106 @@
+import TopPage from "../components/topPage"
+import styles from "../styles/about.module.scss"
+import Head from 'next/head'
+import Image from 'next/image'
+
+export default function About(){
+    return(
+        <>
+        <Head>
+            <title>About Me</title>
+        </Head>
+        <TopPage>
+            <section className={styles.aboutPanel}>
+            <span>
+            <h1>About me</h1>
+            <p>I love old movies, photography, architecture, and websites. I find design inspiration in weird places. I also have a very big head</p>
+            </span>
+                <div className={styles.imageHolder}>
+                    <h3>Berkeley, CA</h3>
+                    <Image 
+                        src='/../public/madisonchill.jpeg'
+                        height={400}
+                        width={250}
+                    />
+                </div>
+            </section>
+            <section className={styles.photography}>
+                <h2>Some of my pictures</h2>
+                <div className={styles.photoCarousel}>
+                    <div className={styles.img}>
+                        <Image
+                            height={200}
+                            width={300}
+                            src='/../public/SanFranPics/1.JPG'
+                        />
+                    </div>
+                    <div className={styles.img}>
+                        <Image
+                            height={300}
+                            width={200}
+                            src='/../public/SanFranPics/2.JPG'
+                        />
+                    </div>
+                    <div className={styles.img}>
+                        <Image
+                            height={300}
+                            width={200}
+                            src='/../public/SanFranPics/3.JPG'
+                        />
+                    </div>
+                    <div className={styles.img}>
+                        <Image
+                            height={300}
+                            width={200}
+                            src='/../public/SanFranPics/4.JPG'
+                        />
+                    </div><div className={styles.img}>
+                        <Image
+                            height={200}
+                            width={300}
+                            src='/../public/SanFranPics/5.JPG'
+                        />
+                    </div><div className={styles.img}>
+                        <Image
+                            height={300}
+                            width={200}
+                            src='/../public/SanFranPics/6.JPG'
+                        />
+                    </div><div className={styles.img}>
+                        <Image
+                            height={300}
+                            width={200}
+                            src='/../public/SanFranPics/7.JPG'
+                        />
+                    </div><div className={styles.img}>
+                        <Image
+                            height={300}
+                            width={200}
+                            src='/../public/SanFranPics/8.JPG'
+                        />
+                    </div><div className={styles.img}>
+                        <Image
+                            height={300}
+                            width={200}
+                            src='/../public/SanFranPics/9.JPG'
+                        />
+                    </div><div className={styles.img}>
+                        <Image
+                            height={300}
+                            width={200}
+                            src='/../public/SanFranPics/10.JPG'
+                        />
+                    </div>
+                    <div className={styles.img}>
+                        <Image
+                            height={300}
+                            width={200}
+                            src='/../public/SanFranPics/11.JPG'
+                        />
+                    </div>
+                </div>
+            </section>
+        </TopPage>
+        </>
+    )
+}
