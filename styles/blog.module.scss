@@ -1,0 +1,39 @@
+.blogHolder{
+    padding: 80px 0;
+    background-image: url('../public/dotbg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    background-color: rgb(5, 118, 74);
+
+    h1{
+        color: white;
+        text-align: center;
+        font-size: 3rem;
+        margin: 30px 0;
+    }
+
+    .blogs{
+        background-color: rgb(30,30,30);
+        width: fit-content;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+
+        .blog{
+            background-color: rgb(40,40,40);
+            margin: 20px;
+            padding: 20px;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+
+            p{
+                margin: 10px 0;
+            }
+        }
+    }
+}
