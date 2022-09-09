@@ -41,6 +41,10 @@
             color: rgb(159, 183, 203);
         }
 
+        .hamburger{
+            display: none;
+        }
+
         
     }
     footer{
@@ -54,4 +58,45 @@
 }
 .active{
     color: blue;
+}
+
+@media only screen and (max-width:800px){
+.container{
+    .header{
+        .navholder{
+            .navitem{
+                display: none;
+            }
+        }
+        .hamburger{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height:70px;
+            margin-right: 40px;
+
+            .patty{
+                width: 40px;
+                height: 2px;
+                background-color: white;
+                position: relative;
+            }
+            .patty::before, .patty::after{
+                content:'';
+                width: 30px;
+                height: 2px;
+                background-color: white;
+                position: absolute;
+            }
+            .patty::before{
+                transform: translateY(10px);
+            }
+            .patty::after{
+                transform: translateY(-10px);
+            }
+        }
+}
+}
 }

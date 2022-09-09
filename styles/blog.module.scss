@@ -1,3 +1,4 @@
+
 .blogHolder{
     padding: 80px 0;
     background-image: url('../public/dotbg.png');
@@ -30,7 +31,8 @@
             color: white;
             border-radius: 10px;
             box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
-
+            cursor: pointer;
+            width: 500px;
             p{
                 margin: 10px 0;
             }
