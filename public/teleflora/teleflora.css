@@ -232,6 +232,10 @@ header span i:hover{
     text-decoration: none;
     margin-top: 40px;
     font-family: var(--poppins);
+    transition: 200ms;
+}
+.hero-button:hover{
+    background-color: #7c0087;
 }
 
 
@@ -275,4 +279,77 @@ header span i:hover{
 }
 .category:hover p{
     color: white;
+}
+
+
+.promotion-section{
+    background-image: url(./pexels-pixabay-235994.jpg);
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.promotion-section h3{
+    font-size: 3rem;
+    font-family: var(--poppins);
+    color: rgb(0, 46, 96);
+    margin: 20px 0;
+    font-style: italic;
+}
+.promotion-section p{
+    font-size: 1.5rem;
+    font-family: var(--serif);
+}
+.promotion-section a{
+    padding: 10px 20px;
+    background-color: #fa3c7a;
+    color: white;
+    font-family: var(--poppins);
+    text-decoration: none;
+    transition: 200ms;
+}
+.promotion-section a:hover{
+    background-color: #bd2d5d;
+}
+.sale-section{
+    display: flex;
+    margin-bottom: 100px;
+}
+.sale-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.sale-item img{
+    width: 200px;
+    transition: 600ms;
+}
+.sale-item p{
+    font-size: 1rem;
+    padding: 5px;
+    text-align: center;
+}
+.sale-item span{
+    display: flex;
+}
+.old-price{
+    text-decoration: line-through;
+    font-family: var(--poppins);
+    margin-right: 10px;
+}
+.new-price{
+    color: #fa3c7a;
+}
+.title{
+    font-weight: 200;
+}
+.sale-item:hover img{
+    width: 250px;
+}
+
+.spacer{
+    height: 100vh;
 }
