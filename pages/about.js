@@ -18,7 +18,7 @@ export default function About(){
                 <div className={styles.imageHolder}>
                     <h3>Berkeley, CA</h3>
                     <Image 
-                        src='/../public/madisonchill.jpeg'
+                        src='/madisonchill.jpeg'
                         height={400}
                         width={250}
                         alt=''
