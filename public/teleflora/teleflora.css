@@ -149,7 +149,7 @@ header span i:hover{
 
 /*<----- MAIN CONTENT STYLING ----->*/
 .sub-header{
-    margin: 70px auto 0 auto;
+    margin: 85px auto 0 auto;
     width: 100%;
     display: flex;
     align-items: center;
@@ -196,5 +196,83 @@ header span i:hover{
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 550px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.outer-border{
+    background-color: rgba(255, 255, 255, 0.885);
+    padding: 20px;
+    width: fit-content;
+    margin:20px;
+}
+.hero{
+    background-color: rgba(255, 255, 255, 0);
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ad00bc;
+}
+.hero h2{
+    font-size: 4rem;
+    font-family: var(--poppins);
+    text-transform: uppercase;
+    font-style: italic;
+    color: #ad00bc;
+}
+.hero p{
+    font-size: 1.3rem;
+    font-family: var(--serif);
+    margin-bottom: 60px;
+}
+.hero-button{
+    background-color: #ad00bc;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 40px;
+    font-family: var(--poppins);
+}
+
+
+.category-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 10px;
+}
+.category{
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    cursor: pointer;
+    transition: 200ms;
+}
+.category i{
+    font-size: 4rem;
+    margin: 10px 0;
+    color: #fa3c7a;
+}
+.category p{
+    font-size: 1.5rem;
+    font-family: var(--serif);
+    color: #fa3c7a;
+    font-weight: 300;
+}
+.category:hover{
+    background-color: #fa3c7a;
+}
+.category:hover i{
+    color: white;
+}
+.category:hover p{
+    color: white;
 }
