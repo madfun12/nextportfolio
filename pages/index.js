@@ -28,32 +28,32 @@ export default function Home() {
             
             <TechCard
               title="HTML"
-              img="/../public/HTML5_logo.png"
+              img="/HTML5_logo.png"
               desc="Hypertext Markup Language. This is the foundation of any website's content. Every bit of web development is going to use HTML in some fashion." 
             />
             <TechCard
               title="CSS"
-              img="/../public/CSS3_logo.png"
+              img="/CSS3_logo.png"
               desc="Cascading stylesheets! Love it or hate it (I'm indifferent), it's how we make our websites look reeeaaal perty. Seems like I spend the most time on this." 
             />
             <TechCard
               title="SASS"
-              img="/../public/SASS_logo.png"
+              img="/SASS_logo.png"
               desc="A step up from regular CSS. It allows for all sorts of features to make CSS a little bit quicker and a whole lot neater." 
             />
             <TechCard
               title="JavaScript"
-              img="/../public/JS_logo.png"
+              img="/JS_logo.png"
               desc="Where programming meets web design. We can add logic to our websites. Today JS can be used to make anything, not just websites. It's also used to make some really awesome tools." 
             />
             <TechCard
               title="ReactJS"
-              img="/../public/REACT_logo.png"
+              img="/REACT_logo.png"
               desc="React is an awesome Javascript library that allows you to create complex web apps. Anything from games, to e-commerce stores, to this website!" 
             />
             <TechCard
               title="NextJS"
-              img="/../public/NEXT_logo.png"
+              img="/NEXT_logo.png"
               desc="Next takes React to the next level by allowing server side rendering and adding in things like routing, static file serving, API routes, and builtin Sass support!" 
             />
           </div>
@@ -62,21 +62,21 @@ export default function Home() {
           <h2>Some projects</h2>
           <div className={styles.flexRow}>
           <Project 
-            img="/../public/tensiessc.png"
+            img="/tensiessc.png"
             title="Tensies"
             desc="This is a game I built using React. The goal is to get all of the dice to show the same number in the least amount of tries possible. Beat my score of 5!"
             location="/tensies">
               <a href="https://madisonfunderburk.com/tensies/index.html">Check it out</a>
           </Project>
           <Project 
-            img="/../public/triviasc.png"
+            img="/triviasc.png"
             title="Trivia Quiz"
             desc="This is a trivia quiz that polls the Open Trivia DB for 5 random questions."
             location="/tensies">
               <a href="https://madisonfunderburk.com/trivia/index.html">Check it out</a>
           </Project>
           <Project 
-            img="/../public/terminalsc.png"
+            img="/terminalsc.png"
             title="Terminal Portfolio"
             desc="I enjopyed the idea of a cyber-punk terminal style portfolio website so I built this one. Predecessor to this site."
             location="/tensies">

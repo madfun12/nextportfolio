@@ -14,10 +14,6 @@ export default function TopPage(props){
     }
 
 
-
-
-
-
     return(<>
         <Head>
           <meta charset="UTF-8"></meta>
@@ -26,7 +22,7 @@ export default function TopPage(props){
         </Head>
         <div className={styles.container}>
         <header className={styles.header}>
-        <Image src='../public/madfunlogo.png' width={150} height={25} alt='Madison Funderburk'/>
+        <Image src="/madfunlogo.png" width={150} height={25} alt='Madison Funderburk'/>
         <nav>
           <ul className={styles.navholder}>
             <li className={styles.navitem}><Link href="/"><a style={router.pathname == "/" ? {color:'rgb(63, 156, 255)'} : {}}>Home</a></Link></li>

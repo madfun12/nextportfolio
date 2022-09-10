@@ -32,7 +32,7 @@ export default function About(){
                         <Image
                             height={200}
                             width={300}
-                            src='/../public/SanFranPics/1.JPG'
+                            src='/SanFranPics/1.JPG'
                             alt=''
                         />
                     </div>
@@ -40,7 +40,7 @@ export default function About(){
                         <Image
                             height={300}
                             width={200}
-                            src='/../public/SanFranPics/2.JPG'
+                            src='/SanFranPics/2.JPG'
                             alt=''
                         />
                     </div>
@@ -48,7 +48,7 @@ export default function About(){
                         <Image
                             height={300}
                             width={200}
-                            src='/../public/SanFranPics/3.JPG'
+                            src='/SanFranPics/3.JPG'
                             alt=''
                         />
                     </div>
@@ -56,49 +56,49 @@ export default function About(){
                         <Image
                             height={300}
                             width={200}
-                            src='/../public/SanFranPics/4.JPG'
+                            src='/SanFranPics/4.JPG'
                             alt=''
                         />
                     </div><div className={styles.img}>
                         <Image
                             height={200}
                             width={300}
-                            src='/../public/SanFranPics/5.JPG'
+                            src='/SanFranPics/5.JPG'
                             alt=''
                         />
                     </div><div className={styles.img}>
                         <Image
                             height={300}
                             width={200}
-                            src='/../public/SanFranPics/6.JPG'
+                            src='/SanFranPics/6.JPG'
                             alt=''
                         />
                     </div><div className={styles.img}>
                         <Image
                             height={300}
                             width={200}
-                            src='/../public/SanFranPics/7.JPG'
+                            src='/SanFranPics/7.JPG'
                             alt=''
                         />
                     </div><div className={styles.img}>
                         <Image
                             height={300}
                             width={200}
-                            src='/../public/SanFranPics/8.JPG'
+                            src='/SanFranPics/8.JPG'
                             alt=''
                         />
                     </div><div className={styles.img}>
                         <Image
                             height={300}
                             width={200}
-                            src='/../public/SanFranPics/9.JPG'
+                            src='/SanFranPics/9.JPG'
                             alt=''
                         />
                     </div><div className={styles.img}>
                         <Image
                             height={300}
                             width={200}
-                            src='/../public/SanFranPics/10.JPG'
+                            src='/SanFranPics/10.JPG'
                             alt=''
                         />
                     </div>
@@ -106,7 +106,7 @@ export default function About(){
                         <Image
                             height={300}
                             width={200}
-                            src='/../public/SanFranPics/11.JPG'
+                            src='/SanFranPics/11.JPG'
                             alt=''
                         />
                     </div>
