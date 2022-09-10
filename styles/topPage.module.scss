@@ -1,10 +1,6 @@
 .container{
     min-height: 100vh;
-    background-image: url('../public/Background.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background: linear-gradient(90deg, rgb(0, 74, 120), rgb(0, 109, 176));
     position: relative;
 
     .header{
