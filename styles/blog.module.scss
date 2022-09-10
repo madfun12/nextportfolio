@@ -39,3 +39,18 @@
         }
     }
 }
+
+@media only screen and (max-width: 800px){
+    .blogHolder{
+        .blogs{
+            width: 90%;
+            .blog{
+                width: 80%;
+
+                p{
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}

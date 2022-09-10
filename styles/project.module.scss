@@ -15,7 +15,7 @@
         background-image: url(../public/abstractbg.png);
         background-size: contain;
         background-repeat: no-repeat;
-        width: 356px;
+        width: 100%;
         height: 200px;
         display: flex;
         align-items: center;
@@ -50,5 +50,15 @@
         background-color: rgb(88, 88, 88);
         color: white;
         border: 3px solid rgb(89, 89, 89);
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .project{
+        width: 300px;
+        
+        .imageHolder{
+            height: 170px;
+        }
     }
 }

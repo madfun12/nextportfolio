@@ -25,7 +25,6 @@
     }
 
     .imageHolder{
-        transform: rotate(10deg);
         h3{
             color: white;
             margin-left: 20px;
@@ -55,6 +54,21 @@
         .img{
             margin: 10px 10px 010px 10px;
             box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+        }
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .aboutPanel{
+        flex-direction: column;
+        padding-top: 100px;
+        p{
+            padding: 20px;
+            color: rgb(255, 255, 255);
+            margin-right: 80px;
+            width: 90%;
+            font-weight: 600;
+            font-size: 1.5rem;
         }
     }
 }

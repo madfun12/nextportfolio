@@ -8,8 +8,8 @@ export default function Project(props){
         <div className={styles.project}>
             <div className={styles.imageHolder}>
                 <Image src={props.img}
-                    width={290}
-                    height={150}
+                    width={240}
+                    height={130}
                     alt=''
                 />
             </div>
