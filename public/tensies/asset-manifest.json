@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tensies/static/css/main.f6a750fc.css",
+    "main.js": "/tensies/static/js/main.71c203d3.js",
+    "index.html": "/tensies/index.html",
+    "main.f6a750fc.css.map": "/tensies/static/css/main.f6a750fc.css.map",
+    "main.71c203d3.js.map": "/tensies/static/js/main.71c203d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6a750fc.css",
+    "static/js/main.71c203d3.js"
+  ]
+}
