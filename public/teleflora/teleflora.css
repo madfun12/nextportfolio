@@ -231,6 +231,8 @@ header span i:hover{
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+    max-width: 1500px;
+    margin: auto;
     height: 500px;
     display: flex;
     align-items: center;
