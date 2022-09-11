@@ -42,6 +42,7 @@ nav ul{
     padding: 26px 20px;
     display: flex;
     align-items: center;
+    z-index: 10;
 }
 .n-l-holder:hover{
     background-color: #fa3c7a;
@@ -94,11 +95,10 @@ nav ul{
     background-color: white;
 }
 .dropdown:hover .dropdown-menu{
-    top:72px;
+    display: flex
 }
 .dropdown-menu{
     position: absolute;
-    top: -1000px;
     background-color: white;
     left: 0;
     transform: translateX(-25%);
@@ -106,8 +106,8 @@ nav ul{
     z-index: -1;
     border: 1px solid rgb(200,200,200);
     border-top: none;
-    display: flex;
     width: fit-content;
+    display: none;
 }
 .dropdown-column{
     display: flex;
