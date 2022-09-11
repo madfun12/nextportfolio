@@ -14,11 +14,11 @@ $color: rgb(0, 56, 23);
 .hero{
     color: white;
     margin: auto;
-    flex-direction: row;
-    justify-content: space-around;
+    align-items: flex-start;
     height: 100vh;
     width: 100%;
-    
+    max-width: 1000px;
+    position: relative;
     h1{
         font-size: 3rem;
         margin: 0 10px;
@@ -80,10 +80,29 @@ $color: rgb(0, 56, 23);
         transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     }
 
+    
+
     .heroContent{
         width: 50%;
         p{
             margin: 40px 10px;
+        }
+    }
+
+    .spinner{
+            width: 400px;
+            fill: rgba(255, 255, 255, 0.134);
+            animation: spin 40000ms infinite linear;
+            position: absolute;
+            right: 0;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
         }
     }
 }

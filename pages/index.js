@@ -20,7 +20,7 @@ export default function Home() {
             <p>I'm a web developer with a passion to help people expand their company's brand and to provide their customers with an unforgettable experience.</p>
             <Link href="/contact">Get in touch</Link>
           </div>
-          <Image src="/heroimage.png" width={440} height={450} className={styles.heroImage} alt=''/>
+          <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 453.44 459.89" className={styles.spinner}><defs></defs><g id="Layer_2-2"><circle class="cls-1" cx="226.74" cy="14.61" r="14.61"/><circle class="cls-1" cx="300.37" cy="27.59" r="14.61"/><circle class="cls-1" cx="365.12" cy="64.96" r="14.61"/><circle class="cls-1" cx="413.19" cy="122.21" r="14.61"/><circle class="cls-1" cx="438.79" cy="192.45" r="14.61"/><circle class="cls-1" cx="438.83" cy="267.21" r="14.61"/><circle class="cls-1" cx="413.31" cy="337.47" r="14.61"/><circle class="cls-1" cx="365.3" cy="394.78" r="14.61"/><circle class="cls-1" cx="300.6" cy="432.22" r="14.61"/><circle class="cls-1" cx="226.99" cy="445.28" r="14.61"/><circle class="cls-1" cx="153.35" cy="432.39" r="14.61"/><circle class="cls-1" cx="88.56" cy="395.09" r="14.61"/><circle class="cls-1" cx="40.42" cy="337.9" r="14.61"/><circle class="cls-1" cx="14.74" cy="267.69" r="14.61"/><circle class="cls-1" cx="14.62" cy="192.93" r="14.61"/><circle class="cls-1" cx="40.06" cy="122.63" r="14.61"/><circle class="cls-1" cx="88" cy="65.27" r="14.61"/><circle class="cls-1" cx="152.66" cy="27.76" r="14.61"/></g></svg>
         </div>
         <section id='tech' className={`${styles.tech} ${styles.flexColumnCenter}`}>
           <h2>What I work with</h2>
