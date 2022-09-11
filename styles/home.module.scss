@@ -90,11 +90,11 @@ $color: rgb(0, 56, 23);
     }
 
     .spinner{
-            width: 400px;
-            fill: rgba(255, 255, 255, 0.134);
-            animation: spin 40000ms infinite linear;
+            width: 700px;
+            animation: spin 10000ms infinite linear;
             position: absolute;
             right: 0;
+            top: 100px;
     }
 
     @keyframes spin {
