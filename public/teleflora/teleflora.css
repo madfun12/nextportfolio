@@ -456,3 +456,51 @@ header span i:hover{
     width: 100%;
     margin-bottom: 20px;
 }
+
+.local-florists{
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+.local-title{
+    color: #fa3c7a;
+    font-size: 3rem;
+    font-family: var(--sans-serif);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.local-bouquet{
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+.local-bouquet:hover .inner-section{
+    opacity: 1;
+}
+.inner-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 80%;
+    width: 80%;
+    opacity: 0;
+    transition: 200ms;
+}
+.inner-section h3{
+    font-family: var(--serif);
+    color: rgb(40, 40, 40);
+    font-size: 1.3rem;
+    margin: 0;
+    text-align: center;
+}
