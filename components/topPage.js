@@ -30,7 +30,7 @@ export default function TopPage(props){
           <ul className={styles.navholder}>
             <li className={styles.navitem}><Link href="/"><a style={router.pathname == "/" ? {color:'rgb(63, 156, 255)'} : {}}>Home</a></Link></li>
             <li className={styles.navitem}><Link href="/about"><a style={router.pathname == "/about" ? {color:'rgb(255, 0, 0)'} : {}}>About</a></Link></li>
-            <li className={styles.navitem}><Link href="/blog"><a style={router.pathname == "/blog" ? {color:'rgb(0, 56, 23)'} : {}}>Blog</a></Link></li>
+            <li className={styles.navitem}><Link href="/blog"><a style={router.pathname == "/blog" ? {color:'rgb(0, 185, 77)'} : {}}>Blog</a></Link></li>
             <li className={styles.navitem}><Link href="/contact"><a style={router.pathname == "/contact" ? {color:'rgb(3, 100, 255)'} : {}}>Contact</a></Link></li>
           </ul>
         </div>}
