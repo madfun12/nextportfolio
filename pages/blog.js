@@ -16,7 +16,7 @@ export default function Blog(){
                                 <div className={styles.blog}>
                                     <h3>Installing Sass in React</h3>
                                     <p>August 13th, 2022</p>
-                                    <p>Going over the steps to install Sass and get it working in React</p>
+                                    <p>Going over the steps to install Sass and get it working in React.</p>
                                 </div>
                             </Link>
                             <Link href="/blogs/customerportal">

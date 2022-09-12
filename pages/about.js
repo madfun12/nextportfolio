@@ -13,7 +13,7 @@ export default function About(){
             <section className={styles.aboutPanel}>
             <span>
             <h1>About me</h1>
-            <p>I love old movies, photography, architecture, and websites. I find design inspiration in weird places. I also have a very big head</p>
+            <p>I love old movies, photography, architecture, and websites. I find design inspiration in weird places. I also have a very big head.</p>
             </span>
                 <div className={styles.imageHolder}>
                     <h3>Berkeley, CA</h3>
