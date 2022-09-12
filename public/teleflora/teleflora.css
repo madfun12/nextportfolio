@@ -21,6 +21,7 @@ header{
     left: 0;
     right: 0;
     z-index: 10;
+    min-height: 75px;
 }
 .h-logo{
     width: 130px;
@@ -181,8 +182,15 @@ header span i:hover{
     align-items: center;
 }
 
+.hamburger{
+    display: none;
+}
+
 
 /*<----- MAIN CONTENT STYLING ----->*/
+.side-menu{
+    display: none;
+}
 .sub-header{
     margin: 73px auto 0 auto;
     width: 100%;
@@ -463,6 +471,7 @@ header span i:hover{
     margin: 100px 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .local-title{
     color: #fa3c7a;
@@ -476,12 +485,13 @@ header span i:hover{
     background-repeat: no-repeat;
     background-size: contain;
     width: 200px;
-    height: 200px;
+    min-width: 200px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 20px;
+    margin: 10px 20px;
     border-radius: 5px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
@@ -505,4 +515,76 @@ header span i:hover{
     font-size: 1.3rem;
     margin: 0;
     text-align: center;
+}
+
+
+
+
+
+@media only screen and (max-width: 1110px){
+    nav{
+        display: none;
+    }
+    .sub-header{
+        display: none;
+    }
+    .hamburger{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 75px;
+        width: 75px;
+    }
+    .patty{
+        width: 30px;
+        height: 2px;
+        background-color: rgb(40, 40, 40);
+    }
+    .patty::before,.patty::after{
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: rgb(40, 40, 40);
+        transition: 200ms;
+    }
+    .patty::before{
+        transform: translateY(8px);
+    }
+    .patty::after{
+        transform: translateY(-8px)
+    }
+
+
+    .hero-section{
+        margin-top: 75px;
+        max-width: 100%;
+    }
+
+    .patty.active{
+        background-color: transparent;
+    }
+    .patty.active::before{
+        transform: rotate(225deg);
+    }
+    .patty.active::after{
+        transform: rotate(135deg);
+
+    }
+
+    .side-menu{
+        display: flex;
+        flex-direction: column;
+        right: -200vw;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        z-index: 10;
+        transition: 400ms;
+    }
+    .side-menu a{
+        font-size: 2rem;
+    }
 }
