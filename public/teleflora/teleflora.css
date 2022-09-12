@@ -525,6 +525,9 @@ header span i:hover{
     nav{
         display: none;
     }
+    .header-container .search{
+        display: none;
+    }
     .sub-header{
         display: none;
     }
@@ -576,6 +579,7 @@ header span i:hover{
     .side-menu{
         display: flex;
         flex-direction: column;
+        align-items: flex-end;
         right: -200vw;
         position: fixed;
         width: 100%;
