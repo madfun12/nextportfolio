@@ -11,6 +11,16 @@ $color: rgb(0, 185, 77);
     display: flex;
     align-items: center;
 }
+.spinner{
+    width: 700px;
+    width: fit-content;
+    animation: spin 10000ms infinite linear;
+    position: absolute;
+    right: 120px;
+    top: 100px;
+    z-index: 0;
+    border-radius: 999px;
+}
 .hero{
     color: rgb(255, 255, 255);
     margin: auto;
@@ -35,49 +45,16 @@ $color: rgb(0, 185, 77);
     a{
         padding: 10px 20px;
         margin: 0 10px;
-        border: 1px solid white;
-        color: white;
+        background-color: white;
+        color: rgb(60, 60, 60);
         text-decoration: none;
         border-radius: 10px;
-        display: inline-block;
-        vertical-align: middle;
-        -webkit-transform: perspective(1px) translateZ(0);
-        transform: perspective(1px) translateZ(0);
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-        position: relative;
-        -webkit-transition-property: color;
-        transition-property: color;
-        -webkit-transition-duration: 0.5s;
-        transition-duration: 0.5s;
+        z-index: 5;
+        transition: 300ms;
     }
-    a::before{
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: 10px;
-        background: #ffffff;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transform-origin: 0 50%;
-        transform-origin: 0 50%;
-        -webkit-transition-property: transform;
-        transition-property: transform;
-        -webkit-transition-duration: 0.5s;
-        transition-duration: 0.5s;
-        -webkit-transition-timing-function: ease-out;
-        transition-timing-function: ease-out;
-    }
-    a:hover, a:focus, a:active{
-        color: rgb(0, 85, 150);
-    }
-    a:hover:before, a:hover:before, a:active:before{
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-        transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    a:hover{
+        background-color: rgb(3, 100, 255);
+        color: white;
     }
 
     
@@ -89,13 +66,7 @@ $color: rgb(0, 185, 77);
         }
     }
 
-    .spinner{
-            width: 700px;
-            animation: spin 10000ms infinite linear;
-            position: absolute;
-            right: 0;
-            top: 100px;
-    }
+    
 
     @keyframes spin {
         from {
