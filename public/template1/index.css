@@ -4,10 +4,7 @@
 }
 
 body {
-  background-image: url(./assets/bodybg.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
+  background-color: rgb(255, 255, 255);
 }
 body header {
   display: flex;
@@ -15,23 +12,240 @@ body header {
   justify-content: space-between;
   width: 100%;
   padding: 10px;
-  border-bottom: 1px solid rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 10;
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
 body header h1 {
-  color: rgb(255, 255, 255);
+  color: rgb(40, 40, 40);
   font-family: questa-grande, serif;
   text-transform: uppercase;
+  z-index: 10;
+}
+body header nav {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
 }
 body header nav ul {
   list-style-type: none;
   display: flex;
+  align-items: center;
 }
 body header nav ul li a {
-  padding: 10px 20px;
-  color: rgb(255, 255, 255);
+  padding: 20px 20px;
+  color: rgb(40, 40, 40);
   font-family: questa-grande, serif;
   text-decoration: none;
   text-transform: uppercase;
+  transition: 200ms;
+}
+body header nav ul li i {
+  margin-left: 5px;
+  transition: 200ms;
+}
+body header nav ul li svg {
+  height: 1rem;
+  fill: none;
+  stroke: black;
+  stroke-width: 6px;
+  transition: 200ms;
+  cursor: pointer;
+  padding: 10px;
+}
+body header nav ul li svg:hover {
+  stroke: rgb(252, 46, 163);
+}
+body header nav ul li:hover a {
+  color: rgb(252, 46, 163);
+}
+body header nav .dropdown {
+  position: relative;
+  z-index: 5;
+}
+body header nav .dropdown .dropdown-menu {
+  display: none;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  height: fit-content;
+  min-width: 250px;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  padding: 10px;
+  border-top: none;
+}
+body header nav .dropdown .dropdown-menu .dropdown-column ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+body header nav .dropdown .dropdown-menu .dropdown-column ul li {
+  margin: 10px 0;
+}
+body header nav .dropdown .dropdown-menu .dropdown-column ul li a {
+  color: rgb(0, 0, 0);
+  padding: 10px 0;
+}
+body header nav .dropdown .dropdown-menu .dropdown-column ul li a:hover {
+  color: rgb(252, 46, 163);
+}
+body header nav .dropdown:hover .dropdown-menu, body header nav .dropdown:active .dropdown-menu {
+  display: block;
+}
+body header nav .dropdown:hover i, body header nav .dropdown:active i {
+  transform: rotate(180deg);
+}
+body .hero-container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  background-image: url(./assets/flowerswhand.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+  background-color: rgb(172, 214, 172);
+}
+body .hero-container .hero {
+  max-width: 500px;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-left: 30px;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.891);
+}
+body .hero-container .hero h2 {
+  font-family: elza, sans-serif;
+  font-size: 4rem;
+}
+body .hero-container .hero p {
+  font-size: 1.8rem;
+  font-family: elza, sans-serif;
+  font-weight: 3400;
+  margin: 30px 0;
+}
+body .best-sellers {
+  margin: 50px;
+}
+body .best-sellers h2 {
+  text-align: center;
+  color: rgb(252, 46, 163);
+  font-family: questa-grande, serif;
+  font-size: 3rem;
+}
+body .best-sellers .flower-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body .best-sellers .flower-container .flower-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  padding: 20px;
+  margin: 10px;
+}
+body .best-sellers .flower-container .flower-item img {
+  width: 200px;
+  transition: 300ms;
+}
+body .best-sellers .flower-container .flower-item .item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .best-sellers .flower-container .flower-item .item-info h4 {
+  font-family: questa-grande, serif;
+  font-size: 1.3rem;
+}
+body .best-sellers .flower-container .flower-item .item-info span {
+  display: flex;
+}
+body .best-sellers .flower-container .flower-item .item-info .price, body .best-sellers .flower-container .flower-item .item-info .regular-price, body .best-sellers .flower-container .flower-item .item-info .sale-price {
+  font-family: elza, sans-serif;
+  font-size: 1.2rem;
+  margin: 10px;
+  font-weight: 400;
+}
+body .best-sellers .flower-container .flower-item .item-info .regular-price {
+  text-decoration: line-through;
+}
+body .best-sellers .flower-container .flower-item .item-info .sale-price {
+  color: rgb(252, 46, 163);
+}
+body .best-sellers .flower-container .flower-item .item-info .buy-now {
+  font-size: 1.1rem;
+}
+body .best-sellers .flower-container .flower-item:hover > img {
+  transform: scale(1.1);
+}
+body footer {
+  background-color: rgb(255, 251, 234);
+  padding: 20px;
+}
+body footer .footer-content {
+  max-width: 1000px;
+  margin: auto;
+}
+body footer .footer-content .footer-nav {
+  width: fit-content;
+}
+body footer .footer-content .footer-nav ul {
+  list-style-type: none;
+  border-right: 1px solid rgb(40, 40, 40);
+  padding: 20px;
+}
+body footer .footer-content .footer-nav ul li {
+  margin: 10px 0;
+}
+body footer .footer-content .footer-nav ul li p {
+  text-decoration: none;
+  font-family: elza, sans-serif;
+  color: rgb(40, 40, 40);
+  font-weight: 800;
+}
+body footer .footer-content .footer-nav ul li a {
+  text-decoration: none;
+  font-family: elza, sans-serif;
+  color: rgb(40, 40, 40);
+  transition: 200ms;
+}
+body footer .footer-content .footer-nav ul li a:hover {
+  color: rgb(252, 46, 163);
+}
+
+.buy-now {
+  background-color: rgb(252, 46, 163);
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  font-family: elza, sans-serif;
+  text-decoration: none;
+  transition: 200ms;
+  font-size: 1.3rem;
+}
+
+.buy-now:hover {
+  background-color: rgb(211, 38, 136);
+}
+
+@media only screen and (max-width: 600px) {
+  body .best-sellers .flower-container .flower-item {
+    flex-direction: row;
+  }
+  body .best-sellers .flower-container .flower-item img {
+    width: 120px;
+  }
+  body .best-sellers .flower-container .flower-item .item-info {
+    margin-left: 30px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
