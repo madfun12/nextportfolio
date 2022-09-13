@@ -306,14 +306,18 @@ $accent-dark: rgb(211, 38, 136);
         background-size: 400px;
 
         .hero{
-            width: 90%;
-            margin: 0;
+            width: 70%;
+            margin: auto;
 
             h2{
                 font-size: 2.3rem;
             }
 
             p{
+                font-size: 1rem;
+            }
+
+            .buyNow{
                 font-size: 1rem;
             }
         }
@@ -324,9 +328,11 @@ $accent-dark: rgb(211, 38, 136);
         .flowerContainer{
 
             a{
-
                 .flowerItem{
                     flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
         
                     img{
                         width: 120px;
@@ -335,8 +341,13 @@ $accent-dark: rgb(211, 38, 136);
                     .itemInfo{
                         margin-left: 30px;
 
+                        .price{
+                            font-size: 0.9rem;
+                        }
+
                         .buyNow{
-                            min-width: 70px;
+                            font-size: 0.8rem;
+                            min-width: 50px;
                         }
                     }
                 }
