@@ -84,7 +84,8 @@ export default function Florist(){
                         return(<FlowerLink 
                         imagePath={item.imagePath}
                         price={item.price}
-                        title={item.title}/>)
+                        title={item.title}
+                        key={index}/>)
                     })
                     
                     }
