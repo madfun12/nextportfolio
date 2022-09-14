@@ -2,23 +2,30 @@ $fancy-text: questa-grande, serif;
 $clean-text: elza, sans-serif;
 $accent: rgb(252, 46, 163);
 $accent-dark: rgb(211, 38, 136);
-.body{
-    background-color: rgb(255, 255, 255);
 
+.body{
+    position: absolute;
+    width: 100%;
     header{
         display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
         align-items: center;
         justify-content: space-between;
-        padding: 10px;
+        padding: 0 10px;
         z-index: 10;
-        border-bottom: 1px solid rgb(0, 0, 0);
-        background-color: rgb(187, 206, 187);
+        border-bottom: 1px solid rgb(235, 235, 235);
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 
         h1{
             color: rgb(40,40,40);
             font-family: $fancy-text;
             text-transform: uppercase;
             z-index: 10;
+            font-size: 1.8rem;
 
         }
         nav{
@@ -32,16 +39,37 @@ $accent-dark: rgb(211, 38, 136);
 
                 li{
                     a{
-                        padding: 20px 20px;
+                        padding: 10px 20px;
                         color: rgb(40,40,40);
                         font-family: $fancy-text;
                         text-decoration: none;
                         text-transform: uppercase;
                         transition: 200ms;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+                li:hover a{
+                    color: $accent;
+                }
+            }
+
+            .dropdown{
+                position: relative;
+                z-index: 5;
+
+                li{
+                    a{
+                        padding: 10px 20px;
+                        color: rgb(40,40,40);
+                        font-family: $fancy-text;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        transition: 200ms;
+                        display: flex;
+                        align-items: center;
                     }
                     i{
-                        margin-left: 5px;
-                        transition: 200ms;
                     }
 
                     svg{
@@ -53,19 +81,8 @@ $accent-dark: rgb(211, 38, 136);
                         cursor: pointer;
                         padding: 10px;
                     }
-                    svg:hover{
-                        stroke: $accent;
-                    }
                     
                 }
-                li:hover a{
-                    color: $accent;
-                }
-            }
-
-            .dropdown{
-                position: relative;
-                z-index: 5;
 
                 .dropdownMenu{
                     display: none;
@@ -74,7 +91,7 @@ $accent-dark: rgb(211, 38, 136);
                     height: fit-content;
                     min-width: 250px;
                     position: absolute;
-                    top: 40px;
+                    top: 56px;
                     right: 0;
                     padding: 10px;
                     border-top: none;
@@ -87,7 +104,6 @@ $accent-dark: rgb(211, 38, 136);
                             align-items: flex-end;
 
                             li{
-                                margin: 10px 0;
 
                                 a{
                                     color: rgb(0, 0, 0);
@@ -103,29 +119,115 @@ $accent-dark: rgb(211, 38, 136);
                     }
                 }
             }
-            .dropdown:hover, .dropdown:active{
+            .dropdown:hover{
 
                 .dropdownMenu{
                     display: block;
                 }
-                i{
-                    transform: rotate(180deg);
+                
+                li{
+                    a{
+                        .dropdownArrow{
+                            transform: rotate(180deg);
+                        }
+                    }
                 }
             }
             
+        }
+        .hamburger{
+            display: none;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+
+            .patty{
+                width: 30px;
+                background-color: rgb(40,40,40);
+                height: 2px;
+                position: relative;
+                transition: 200ms ease-in-out;
+            }
+            .pattyactive{
+                background-color: transparent;
+                height: 2px;
+                position: relative;
+                width: 30px;
+                transition: 200ms ease-in-out;
+            }
+            .pattyactive::before, .pattyactive::after{
+                content: '';
+                height: inherit;
+                width: inherit;
+                position: absolute;
+                background-color: rgb(40,40,40);
+                transition: 200ms ease-in-out;
+
+            }
+            .pattyactive::before{
+                transform: rotate(45deg);
+            }
+            .pattyactive::after{
+                transform: rotate(-45deg);
+            }
+            .patty::before,.patty::after{
+                content: '';
+                height: inherit;
+                width: inherit;
+                position: absolute;
+                transition: 200ms ease-in-out;
+                background-color: rgb(40,40,40);
+            }
+            .patty::before{
+                transform: translateY(7px);
+            }
+            .patty::after{
+                transform: translateY(-7px);
+            }
+        }
+    }
+
+    .sideMenu{
+        position: fixed;
+        width: 250px;
+        top: 61px;
+        right: 0;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: white;
+        height: 100%;
+        padding: 20px;
+        transition: 200ms;
+
+        ul{
+            list-style-type: none;
+            text-align: right;
+
+            li{
+                margin: 20px 0;
+
+                a{
+                    color: black;
+                    text-decoration: none;
+                    font-family: $fancy-text;
+                    font-size: 1.5rem;
+                }
+            }
         }
     }
 
     .heroContainer{
         height: 90vh;
+        max-height: 700px;
         display: flex;
         align-items: center;
         background-image: url(../public/template1/assets/flowerswhand.png);
-        background-position: top right;
+        background-position: center right;
         background-repeat: no-repeat;
-        width: 100%;
         position: relative;
-        background-color: rgb(187, 206, 187);
         .hero{
             max-width: 500px;
             padding: 20px;
@@ -155,7 +257,12 @@ $accent-dark: rgb(211, 38, 136);
     }
 
     .bestSellers{
-        margin: 50px;
+        margin: 50px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         h2{
             text-align: center;
@@ -166,29 +273,25 @@ $accent-dark: rgb(211, 38, 136);
 
         .flowerContainer{
             padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            margin: auto;
+            grid-template-columns: repeat(4, 200px);
+            grid-column-gap: 30px;
+            grid-row-gap: 30px;
 
-            
-
-            a{
-                text-decoration: none;
-                color: rgb(40,40,40);
-
+            @media only screen and (max-width:975px){
+                grid-template-columns: repeat(2, 300px);
+            }
                 .flowerItem{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    width: fit-content;
-                    padding: 20px;
-                    margin: 10px;
-                    
-                    img{
-                        width: 200px;
-                        transition: 300ms;
-
-                    }
+                    justify-content: flex-start;
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid rgb(230,230,230);
+                    border-radius: 5px;
+                    box-shadow: 0px 3px 5px rgba(0,0,0,0.05);
 
                     .itemInfo{
                         display: flex;
@@ -198,6 +301,7 @@ $accent-dark: rgb(211, 38, 136);
                         h4{
                             font-family: $fancy-text;
                             font-size: 1.3rem;
+                            text-align: center;
                         }
 
                         span{
@@ -227,7 +331,6 @@ $accent-dark: rgb(211, 38, 136);
                         }
                     }
                 }
-            }
         }
     }
 
@@ -238,12 +341,15 @@ $accent-dark: rgb(211, 38, 136);
         .footerContent{
             max-width: 1000px;
             margin: auto;
+            display: flex;
+            height: 100%;
 
             .footerNav{
                 width: fit-content;
+                padding-right: 50px;
+                height: 100%;
                 ul{
                     list-style-type: none;
-                    border-right: 1px solid rgb(40,40,40);
                     padding: 20px;
 
 
@@ -294,14 +400,21 @@ $accent-dark: rgb(211, 38, 136);
 .body{
 
     header{
-
+        padding: 10px;
         nav{
             display: none;
+        }
+        .hamburger{
+            display: flex;
         }
     }
 
     .heroContainer{
         background-size: 400px;
+        background-position: bottom right;
+        align-items: flex-start;
+        padding-top: 75px;
+        max-height: 500px;
 
         .hero{
             width: 70%;
@@ -323,36 +436,47 @@ $accent-dark: rgb(211, 38, 136);
 
     .bestSellers{
 
+        h2{
+            font-size: 2.5rem;
+        }
+
         .flowerContainer{
+            margin: none;
+            grid-template-columns: 300px;
+            
+            .flowerItem{
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+    
+                img{
+                    width: 120px;
+                }
+            
+                .itemInfo{
+                    margin-left: 30px;
 
-            a{
-                .flowerItem{
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100%;
-        
-                    img{
-                        width: 120px;
+                    .price{
+                        font-size: 0.9rem;
                     }
-                
-                    .itemInfo{
-                        margin-left: 30px;
 
-                        .price{
-                            font-size: 0.9rem;
-                        }
-
-                        .buyNow{
-                            font-size: 0.8rem;
-                            min-width: 50px;
-                        }
+                    .buyNow{
+                        font-size: 0.8rem;
+                        min-width: 50px;
                     }
                 }
             }
+            
         }
 
         
+    }
+
+    footer{
+        .footerContent{
+        flex-direction: column;
+        }
     }
 }
     

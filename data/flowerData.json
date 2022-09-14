@@ -1,0 +1,24 @@
+{
+    "bestSellers": [
+        {
+            "title": "Teleflora's Pretty In Blue",
+            "price": 54.99,
+            "imagePath": "/template1/assets/flowers1.webp"
+        },
+        {
+            "title": "Dashing Daisies",
+            "price": 54.99,
+            "imagePath": "/template1/assets/flowers4.webp"
+        },
+        {
+            "title": "Dashing Daisies",
+            "price": 54.99,
+            "imagePath": "/template1/assets/flowers4.webp"
+        },
+        {
+            "title": "Dashing Daisies",
+            "price": 54.99,
+            "imagePath": "/template1/assets/flowers4.webp"
+        }
+    ]
+}

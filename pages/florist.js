@@ -1,20 +1,42 @@
+import React from 'react';
 import styles from '../styles/florist.module.scss'
 import Image from 'next/image'
+import FlowerLink from '../components/telefloraTemplate/flowerLink';
 import Head from 'next/head'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import flowerData from '../data/flowerData.json'
+
 export default function Florist(){
+    const [mobileActive, setMobileActive] = React.useState(false)
+
+    const toggleMobile = () => {
+        setMobileActive(prevState => (!prevState))
+    }
+
+    const getPattyStyle = () => {
+        if(!mobileActive){
+            return styles.patty
+        }else{
+            return styles.pattyactive
+        }
+    }
+
     return(
     <>
+        <Head>
+            <meta charSet="UTF-8"></meta>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+            <title>Florist Template</title>
+        </Head>
         <div className={styles.body}>
-            <Head>
-                <title>Florist Template</title>
-                <link rel="stylesheet" href="https://use.typekit.net/svm7tba.css"></link>
-            </Head>
+            
             <header>
                 <h1>Florist Shop</h1>
                 <nav>
                     <ul>
                         <div className={styles.dropdown}>
-                            <li><a href="">Occasions<i className="fa-solid fa-angle-down"></i></a></li>
+                            <li><a href="">Occasions<FontAwesomeIcon icon={faAngleDown} className={styles.dropdownArrow}/></a></li>
                             <div className={styles.dropdownMenu}>
                                 <div className={styles.dropdownColumn}>
                                     <ul>
@@ -34,7 +56,18 @@ export default function Florist(){
                         <li><a href="">Help</a></li>
                     </ul>
                 </nav>
+                <div className={styles.hamburger} onClick={toggleMobile}>
+                    <div className={getPattyStyle()}></div>
+                </div>
             </header>
+            <div className={styles.sideMenu} style={{right: mobileActive ? '0' : '-1000px'}}>
+                <ul>
+                    <li><a href="">Occasions</a></li>
+                    <li><a href="">Flowers</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Help</a></li>
+                </ul>
+            </div>
             <div className={styles.heroContainer}>
                 <div className={styles.outerEdge}>
                     <div className={styles.hero}>
@@ -47,54 +80,14 @@ export default function Florist(){
             <div className={styles.bestSellers}>
                 <h2>Our Best Sellers</h2>
                 <div className={styles.flowerContainer}>
-                    <a href="">
-                        <div className={styles.flowerItem}>
-                            <Image src="/template1/assets/flowers1.webp" width={175} height={200} alt=""/>
-                            <div className={styles.itemInfo}>
-                                <h4>Flower Title</h4>
-                                <span>
-                                    <p className={styles.price}>$54.99</p>
-                                </span>
-                                <a href="" className={styles.buyNow}>Buy Now</a>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div className={styles.flowerItem}>
-                            <Image src="/template1/assets/flowers1.webp" width={175} height={200} alt=""/>
-                            <div className={styles.itemInfo}>
-                                <h4>Flower Title</h4>
-                                <span>
-                                    <p className={styles.price}>$54.99</p>
-                                </span>
-                                <a href="" className={styles.buyNow}>Buy Now</a>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div className={styles.flowerItem}>
-                            <Image src="/template1/assets/flowers1.webp" width={175} height={200} alt=""/>
-                            <div className={styles.itemInfo}>
-                                <h4>Flower Title</h4>
-                                <span>
-                                    <p className={styles.price}>$54.99</p>
-                                </span>
-                                <a href="" className={styles.buyNow}>Buy Now</a>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div className={styles.flowerItem}>
-                            <Image src="/template1/assets/flowers1.webp" width={175} height={200} alt=""/>
-                            <div className={styles.itemInfo}>
-                                <h4>Flower Title</h4>
-                                <span>
-                                    <p className={styles.price}>$54.99</p>
-                                </span>
-                                <a href="" className={styles.buyNow}>Buy Now</a>
-                            </div>
-                        </div>
-                    </a>
+                    {flowerData.bestSellers.map((item, index) => {
+                        return(<FlowerLink 
+                        imagePath={item.imagePath}
+                        price={item.price}
+                        title={item.title}/>)
+                    })
+                    
+                    }
                 </div>
             </div>
             <div className={styles.categoryHolder}>
@@ -112,6 +105,17 @@ export default function Florist(){
                             <li><a href="">Anniversary</a></li>
                             <li><a href="">Get Well</a></li>
                             <li><a href="">Sympathy</a></li>
+                        </ul>
+                    </nav>
+                    <nav className={styles.footerNav}>
+                        <ul>
+                            <li><p>Learn More</p></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Safe Shopping</a></li>
+                            <li><a href="">Privacy</a></li>
+                            <li><a href="">Delivery</a></li>
+                            <li><a href="">Substitutions</a></li>
+                            <li><a href="">Site Map</a></li>
                         </ul>
                     </nav>
                 </div>
