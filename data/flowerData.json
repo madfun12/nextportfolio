@@ -1,24 +1,52 @@
-{
-    "bestSellers": [
-        {
-            "title": "Teleflora's Pretty In Blue",
-            "price": 54.99,
-            "imagePath": "https://madisonfunderburk.com/template1/assets/flowers1.webp"
-        },
-        {
-            "title": "Dashing Daisies",
-            "price": 54.99,
-            "imagePath": "https://madisonfunderburk.com/template1/assets/flowers4.webp"
-        },
-        {
-            "title": "Blush Life Bouquet",
-            "price": 54.99,
-            "imagePath": "https://madisonfunderburk.com/template1/assets/flowers2.webp"
-        },
-        {
-            "title": "Teleflora's Mid Mod Brights Bouquet",
-            "price": 54.99,
-            "imagePath": "https://madisonfunderburk.com/template1/assets/flowers7.webp"
-        }
-    ]
-}
+[
+    {
+        "store": "Best Sellers",
+        "items": [
+            {
+                "title": "Teleflora's Pretty In Blue",
+                "price": 54.99,
+                "imagePath": "https://madisonfunderburk.com/template1/assets/flowers1.webp"
+            },
+            {
+                "title": "Dashing Daisies",
+                "price": 54.99,
+                "imagePath": "https://madisonfunderburk.com/template1/assets/flowers4.webp"
+            },
+            {
+                "title": "Blush Life Bouquet",
+                "price": 54.99,
+                "imagePath": "https://madisonfunderburk.com/template1/assets/flowers2.webp"
+            },
+            {
+                "title": "Teleflora's Mid Mod Brights Bouquet",
+                "price": 54.99,
+                "imagePath": "https://madisonfunderburk.com/template1/assets/flowers7.webp"
+            }
+        ]
+    },
+    {
+        "store": "Birthday Flowers",
+        "items": [
+            {
+                "title": "Teleflora's Pretty In Blue",
+                "price": 54.99,
+                "imagePath": "https://madisonfunderburk.com/template1/assets/flowers1.webp"
+            },
+            {
+                "title": "Dashing Daisies",
+                "price": 54.99,
+                "imagePath": "https://madisonfunderburk.com/template1/assets/flowers4.webp"
+            },
+            {
+                "title": "Blush Life Bouquet",
+                "price": 54.99,
+                "imagePath": "https://madisonfunderburk.com/template1/assets/flowers2.webp"
+            },
+            {
+                "title": "Teleflora's Mid Mod Brights Bouquet",
+                "price": 54.99,
+                "imagePath": "https://madisonfunderburk.com/template1/assets/flowers7.webp"
+            }
+        ]
+    }
+]

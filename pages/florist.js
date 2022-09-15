@@ -28,7 +28,7 @@ export default function Florist(){
             <div className={styles.bestSellers}>
                 <h2>Our Best Sellers</h2>
                 <div className={styles.flowerContainer}>
-                    {flowerData.bestSellers.map((item, index) => {
+                    {flowerData[0].items.map((item, index) => {
                         return(<FlowerLink 
                         imagePath={item.imagePath}
                         price={item.price}

@@ -125,7 +125,7 @@ export default function Florist(props){
                             <li><a href="">Site Map</a></li>
                         </ul>
                     </nav>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3754.3730486781133!2d-97.5179732822647!3d35.4660032598074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b217299f574e03%3A0x8fd2a7a17df9affc!2sMyriad%20Botanical%20Gardens!5e0!3m2!1sen!2sus!4v1663244112281!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3754.3730486781133!2d-97.5179732822647!3d35.4660032598074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b217299f574e03%3A0x8fd2a7a17df9affc!2sMyriad%20Botanical%20Gardens!5e0!3m2!1sen!2sus!4v1663244112281!5m2!1sen!2sus" width="600" height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     <nav className={styles.footerNav}>
                         <ul>
                             <li><p>Our Hours</p></li>
