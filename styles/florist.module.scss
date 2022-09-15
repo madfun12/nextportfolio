@@ -103,6 +103,8 @@ $accent-dark: rgb(211, 38, 136);
                     height: fit-content;
                     border-top: none;
                     flex-direction: column;
+                    font-family: $clean-text;
+
             
                     ul{
                         list-style: none;
@@ -142,6 +144,7 @@ $accent-dark: rgb(211, 38, 136);
                     height: fit-content;
                     border-top: none;
                     flex-direction: column;
+                    font-family: $clean-text;
                 }
 
                 .dropdownMenu{
@@ -259,7 +262,7 @@ $accent-dark: rgb(211, 38, 136);
     .sideMenu{
         position: fixed;
         width: 250px;
-        top: 61px;
+        top: 60px;
         right: 0;
         z-index: 10;
         display: flex;
@@ -291,6 +294,8 @@ $accent-dark: rgb(211, 38, 136);
     .heroContainer{
         height: 90vh;
         max-height: 700px;
+        max-width: 1900px;
+        margin: auto;
         display: flex;
         align-items: center;
         background-image: url(../public/template1/assets/flowerswhand.png);
@@ -424,7 +429,7 @@ $accent-dark: rgb(211, 38, 136);
             grid-row-gap: 30px;
 
             @media only screen and (max-width:975px){
-                grid-template-columns: repeat(2, 300px);
+                grid-template-columns: repeat(2, 200px);
             }
 
             .category{
@@ -468,13 +473,14 @@ $accent-dark: rgb(211, 38, 136);
         padding: 20px;
 
         .footerContent{
-            max-width: 1000px;
+            width: fit-content;
             margin: auto;
             display: flex;
             height: 100%;
 
             .footerNav{
                 width: fit-content;
+                max-width: 250px;
                 padding-right: 50px;
                 height: 100%;
                 ul{
@@ -502,6 +508,13 @@ $accent-dark: rgb(211, 38, 136);
                         }
                     }
                 }
+            }
+
+            iframe{
+                width: 300px;
+                height: 300px;
+                outline: none;
+                border: none;
             }
         }
     }

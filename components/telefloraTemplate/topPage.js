@@ -125,6 +125,23 @@ export default function Florist(props){
                             <li><a href="">Site Map</a></li>
                         </ul>
                     </nav>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3754.3730486781133!2d-97.5179732822647!3d35.4660032598074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b217299f574e03%3A0x8fd2a7a17df9affc!2sMyriad%20Botanical%20Gardens!5e0!3m2!1sen!2sus!4v1663244112281!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <nav className={styles.footerNav}>
+                        <ul>
+                            <li><p>Our Hours</p></li>
+                            <li><p>Mon-Fri: 9AM-7PM</p></li>
+                            <li><p>Sat: 10AM-2PM</p></li>
+                            <li><p>Sun: Closed</p></li>
+                        </ul>
+                    </nav>
+                    <nav className={styles.footerNav}>
+                        <ul>
+                            <li><p>Our Location</p></li>
+                            <li><p>456 NW 239th St<br></br> Oklahoma City, OK</p></li>
+                            <li><p>(405) 999-9999</p></li>
+                            <li><p>john@doeflorist.com</p></li>
+                        </ul>
+                    </nav>
                 </div>
             </footer>
         </div>
