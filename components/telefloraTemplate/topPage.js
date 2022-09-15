@@ -12,9 +12,6 @@ export default function Florist(props){
     const toggleMobile = () => {
         setMobileActive(prevState => (!prevState))
     }
-    const toggleProfile = () => {
-        setProfileActive(prevState => (!prevState))
-    }
 
     const getPattyStyle = () => {
         if(!mobileActive){
@@ -70,7 +67,7 @@ export default function Florist(props){
                         </div>
                         <li><a href="">About Us</a></li>
                         <div className={styles.dropdown}>
-                            <li><FontAwesomeIcon icon={faUser} className={styles.headerIcon} onClick={toggleProfile}/></li>
+                            <li><FontAwesomeIcon icon={faUser} className={styles.headerIcon}/></li>
                             <div className={styles.profileMenu}>
                                 <h3>John Doe</h3>
                                 <ul>
@@ -82,8 +79,14 @@ export default function Florist(props){
                                 </ul>
                             </div>
                         </div>
-                        
+                        <div className={styles.dropdown}>
                         <li><FontAwesomeIcon icon={faShoppingCart} className={styles.headerIcon}/></li>
+                            <div className={styles.shoppingCart}>
+                                <h3>Shopping Cart</h3>
+                                <p>0 items</p>
+                            </div>
+                        </div>
+                        
                     </ul>
                 </nav>
                 <div className={styles.hamburger} onClick={toggleMobile}>
