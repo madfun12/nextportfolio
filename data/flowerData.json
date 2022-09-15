@@ -11,14 +11,14 @@
             "imagePath": "/template1/assets/flowers4.webp"
         },
         {
-            "title": "Dashing Daisies",
+            "title": "Blush Life Bouquet",
             "price": 54.99,
-            "imagePath": "/template1/assets/flowers4.webp"
+            "imagePath": "/template1/assets/flowers2.webp"
         },
         {
-            "title": "Dashing Daisies",
+            "title": "Teleflora's Mid Mod Brights Bouquet",
             "price": 54.99,
-            "imagePath": "/template1/assets/flowers4.webp"
+            "imagePath": "/template1/assets/flowers7.webp"
         }
     ]
 }

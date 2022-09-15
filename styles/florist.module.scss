@@ -60,7 +60,7 @@ $accent-dark: rgb(211, 38, 136);
 
                 li{
                     a{
-                        padding: 10px 20px;
+                        padding: 20px 20px;
                         color: rgb(40,40,40);
                         font-family: $fancy-text;
                         text-decoration: none;
@@ -72,16 +72,56 @@ $accent-dark: rgb(211, 38, 136);
                     i{
                     }
 
-                    svg{
-                        height: 1rem;
-                        fill: none;
-                        stroke: black;
-                        stroke-width: 6px;
+                    .headerIcon{
+                        padding: 22px;
+                        font-size: 0.9rem;
                         transition: 200ms;
-                        cursor: pointer;
-                        padding: 10px;
                     }
+                    .headerIcon:hover{
+                        color: $accent;
+                    }
+
                     
+                    
+                }
+
+                .profileMenu{
+                    position: absolute;
+                    top: 61px;
+                    right: 0;
+                    text-align: right;
+                    background-color: white;
+                    padding: 20px;
+                    border: 1px solid rgb(0, 0, 0);
+                    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+                    z-index: 5;
+                    transition: 300ms;
+                    min-width: 200px;
+                    display: none;
+                    height: fit-content;
+                    border-top: none;
+                    flex-direction: column;
+            
+                    ul{
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+            
+                        li{
+                            a{
+                                padding: 10px 0;
+                                color: black;
+                                font-family: $clean-text;
+                                text-decoration: none;
+                                font-weight: 500;
+                                text-transform: none;
+                            }
+                            a:hover{
+                                color: $accent;
+                            }
+                        }
+                    }
                 }
 
                 .dropdownMenu{
@@ -91,7 +131,7 @@ $accent-dark: rgb(211, 38, 136);
                     height: fit-content;
                     min-width: 250px;
                     position: absolute;
-                    top: 56px;
+                    top: 60px;
                     right: 0;
                     padding: 10px;
                     border-top: none;
@@ -123,6 +163,10 @@ $accent-dark: rgb(211, 38, 136);
 
                 .dropdownMenu{
                     display: block;
+                }
+
+                .profileMenu{
+                    display: flex;
                 }
                 
                 li{
@@ -219,6 +263,7 @@ $accent-dark: rgb(211, 38, 136);
         }
     }
 
+    
     .heroContainer{
         height: 90vh;
         max-height: 700px;
@@ -292,11 +337,13 @@ $accent-dark: rgb(211, 38, 136);
                     border: 1px solid rgb(230,230,230);
                     border-radius: 5px;
                     box-shadow: 0px 3px 5px rgba(0,0,0,0.05);
+                    position: relative;
 
                     .itemInfo{
                         display: flex;
                         flex-direction: column;
                         align-items: center;
+                        margin-bottom: 40px;
 
                         h4{
                             font-family: $fancy-text;
@@ -328,6 +375,8 @@ $accent-dark: rgb(211, 38, 136);
                         .buyNow{
                             font-size: 1.1rem;
                             color: #fff;
+                            position: absolute;
+                            bottom: 10px;
                         }
                     }
                 }
@@ -388,6 +437,7 @@ $accent-dark: rgb(211, 38, 136);
     text-decoration: none;
     transition: 200ms;
     font-size: 1.3rem;
+    cursor: pointer;
 }
 .buyNow:hover{
     background-color: $accent-dark;
