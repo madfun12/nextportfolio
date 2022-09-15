@@ -16,6 +16,10 @@ export default function Store({ storeData }){
 
                     <h1>{storeData.store}</h1>
                 </div>
+                <div className={styles.storeContent}>
+                    <div className={styles.storeMenu}></div>
+                    <div className={styles.storeContent}></div>
+                </div>
                 
             </div>
         </TopPage>
