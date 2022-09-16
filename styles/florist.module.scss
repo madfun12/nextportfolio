@@ -301,6 +301,7 @@ $accent-dark: rgb(211, 38, 136);
         background-position: center right;
         background-repeat: no-repeat;
         position: relative;
+
         .hero{
             max-width: 500px;
             padding: 20px;
@@ -325,6 +326,19 @@ $accent-dark: rgb(211, 38, 136);
                 margin: 30px 0;
             }
 
+            a{
+                background-color: $accent;
+                color: white;
+                font-family: $clean-text;
+                padding: 10px 20px;
+                text-decoration: none;
+                font-size: 1.3rem;
+                border-radius: 7px;
+                transition: 200ms;
+            }
+            a:hover{
+                background-color: $accent-dark;
+            }
             
         }
     }

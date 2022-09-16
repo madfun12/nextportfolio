@@ -3,12 +3,16 @@ import styles from '../styles/florist.module.scss'
 import TopPage from '../components/telefloraTemplate/topPage'
 import FlowerLink from '../components/telefloraTemplate/flowerLink';
 import Head from 'next/head'
+import Link from 'next/link';
 import flowerData from '../data/flowerData.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFaceKissWinkHeart, faHeart, faCalendar } from '@fortawesome/free-regular-svg-icons';
 import { faCakeCandles } from '@fortawesome/free-solid-svg-icons';
 
 export default function Florist(){
+    //gets first four items from the best sellers array
+    const firstFour = flowerData[0].items.slice(0,4)
+
 
     return(
     <>
@@ -21,14 +25,14 @@ export default function Florist(){
                     <div className={styles.hero}>
                         <h2>Make a Wish</h2>
                         <p>Make their birthday one-of-a-kind with a unique bouquet just for them!</p>
-                        <a href="" className={styles.buyNow}>Shop Birthday</a>
+                        <Link href="/store/birthdayflowers" className={styles.buyNow}>Shop Birthday</Link>
                     </div>
                 </div>
             </div>
             <div className={styles.bestSellers}>
                 <h2>Our Best Sellers</h2>
                 <div className={styles.flowerContainer}>
-                    {flowerData[0].items.map((item, index) => {
+                    {firstFour.map((item, index) => {
                         return(<FlowerLink 
                         imagePath={item.imagePath}
                         price={item.price}

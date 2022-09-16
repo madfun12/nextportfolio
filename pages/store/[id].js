@@ -2,6 +2,7 @@ import TopPage from '../../components/telefloraTemplate/topPage'
 import { getAllStoreIds, getStoreData } from '../../lib/stores';
 import styles from '../../styles/store.module.scss'
 import Head from 'next/head'
+import StoreItem from '../../components/telefloraTemplate/storeItem'
 
 
 //actual jsx for the store page
@@ -16,9 +17,20 @@ export default function Store({ storeData }){
 
                     <h1>{storeData.store}</h1>
                 </div>
-                <div className={styles.storeContent}>
-                    <div className={styles.storeMenu}></div>
-                    <div className={styles.storeContent}></div>
+                <div className={styles.storeHolder}>
+                    <div className={styles.storeMenu}>
+                        <h2>Filter your results</h2>
+                    </div>
+                    <div className={styles.storeContent}>
+                        {storeData.items.map(item => {
+                            return(
+                                <StoreItem 
+                                imagePath={item.imagePath}
+                                title={item.title}
+                                price={item.price}/>
+                            )
+                        })}
+                    </div>
                 </div>
                 
             </div>

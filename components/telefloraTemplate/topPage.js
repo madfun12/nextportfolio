@@ -63,7 +63,7 @@ export default function Florist(props){
                                         <li><a href="">By Type</a></li>
                                         <li><a href="">By Season</a></li>
                                         <li><a href="">By Recipient</a></li>
-                                        <li><a href="">Gift Baskets</a></li>
+                                        <li><Link href="/store/bestsellers">Best Sellers</Link></li>
                                     </ul>
                                 </div>
                             </div>
