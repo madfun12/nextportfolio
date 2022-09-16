@@ -22,12 +22,13 @@ export default function Store({ storeData }){
                         <h2>Filter your results</h2>
                     </div>
                     <div className={styles.storeContent}>
-                        {storeData.items.map(item => {
+                        {storeData.items.map((item,index) => {
                             return(
                                 <StoreItem 
                                 imagePath={item.imagePath}
                                 title={item.title}
-                                price={item.price}/>
+                                price={item.price}
+                                key={index}/>
                             )
                         })}
                     </div>
