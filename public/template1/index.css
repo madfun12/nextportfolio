@@ -1,31 +1,31 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background-color: rgb(255, 255, 255);
+  min-width: 100%;
 }
 body header {
   display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0);
   z-index: 10;
-  border-bottom: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(235, 235, 235);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 body header h1 {
   color: rgb(40, 40, 40);
   font-family: questa-grande, serif;
   text-transform: uppercase;
   z-index: 10;
+  font-size: 1.8rem;
 }
 body header nav {
   display: flex;
   align-items: center;
-  margin-right: 40px;
 }
 body header nav ul {
   list-style-type: none;
@@ -63,7 +63,7 @@ body header nav .dropdown {
   position: relative;
   z-index: 5;
 }
-body header nav .dropdown .dropdown-menu {
+body header nav .dropdown .dropdownMenu {
   display: none;
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(0, 0, 0);
@@ -75,39 +75,114 @@ body header nav .dropdown .dropdown-menu {
   padding: 10px;
   border-top: none;
 }
-body header nav .dropdown .dropdown-menu .dropdown-column ul {
+body header nav .dropdown .dropdownMenu .dropdownColumn ul {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-body header nav .dropdown .dropdown-menu .dropdown-column ul li {
+body header nav .dropdown .dropdownMenu .dropdownColumn ul li {
   margin: 10px 0;
 }
-body header nav .dropdown .dropdown-menu .dropdown-column ul li a {
+body header nav .dropdown .dropdownMenu .dropdownColumn ul li a {
   color: rgb(0, 0, 0);
   padding: 10px 0;
 }
-body header nav .dropdown .dropdown-menu .dropdown-column ul li a:hover {
+body header nav .dropdown .dropdownMenu .dropdownColumn ul li a:hover {
   color: rgb(252, 46, 163);
 }
-body header nav .dropdown:hover .dropdown-menu, body header nav .dropdown:active .dropdown-menu {
+body header nav .dropdown:hover .dropdownMenu, body header nav .dropdown:active .dropdownMenu {
   display: block;
 }
 body header nav .dropdown:hover i, body header nav .dropdown:active i {
   transform: rotate(180deg);
 }
-body .hero-container {
+body header .hamburger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+body header .hamburger .patty {
+  width: 30px;
+  background-color: rgb(40, 40, 40);
+  height: 2px;
+  position: relative;
+  transition: 200ms ease-in-out;
+}
+body header .hamburger .pattyactive {
+  background-color: transparent;
+  height: 2px;
+  position: relative;
+  width: 30px;
+  transition: 200ms ease-in-out;
+}
+body header .hamburger .pattyactive::before, body header .hamburger .pattyactive::after {
+  content: "";
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  background-color: rgb(40, 40, 40);
+  transition: 200ms ease-in-out;
+}
+body header .hamburger .pattyactive::before {
+  transform: rotate(45deg);
+}
+body header .hamburger .pattyactive::after {
+  transform: rotate(-45deg);
+}
+body header .hamburger .patty::before, body header .hamburger .patty::after {
+  content: "";
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  transition: 200ms ease-in-out;
+  background-color: rgb(40, 40, 40);
+}
+body header .hamburger .patty::before {
+  transform: translateY(7px);
+}
+body header .hamburger .patty::after {
+  transform: translateY(-7px);
+}
+body .sideMenu {
+  position: fixed;
+  width: 250px;
+  top: 61px;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: white;
+  height: 100%;
+  padding: 20px;
+  transition: 200ms;
+}
+body .sideMenu ul {
+  list-style-type: none;
+  text-align: right;
+}
+body .sideMenu ul li {
+  margin: 20px 0;
+}
+body .sideMenu ul li a {
+  color: black;
+  text-decoration: none;
+  font-family: questa-grande, serif;
+  font-size: 1.5rem;
+}
+body .heroContainer {
   height: 90vh;
   display: flex;
   align-items: center;
   background-image: url(./assets/flowerswhand.png);
   background-position: top right;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 100vw;
   position: relative;
-  background-color: rgb(172, 214, 172);
 }
-body .hero-container .hero {
+body .heroContainer .hero {
   max-width: 500px;
   padding: 20px;
   height: 100%;
@@ -119,109 +194,114 @@ body .hero-container .hero {
   height: fit-content;
   background-color: rgba(255, 255, 255, 0.891);
 }
-body .hero-container .hero h2 {
-  font-family: elza, sans-serif;
+body .heroContainer .hero h2 {
+  font-family: questa-grande, serif;
   font-size: 4rem;
 }
-body .hero-container .hero p {
+body .heroContainer .hero p {
   font-size: 1.8rem;
   font-family: elza, sans-serif;
   font-weight: 3400;
   margin: 30px 0;
 }
-body .best-sellers {
-  margin: 50px;
+body .bestSellers {
+  margin: 50px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-body .best-sellers h2 {
+body .bestSellers h2 {
   text-align: center;
   color: rgb(252, 46, 163);
   font-family: questa-grande, serif;
   font-size: 3rem;
 }
-body .best-sellers .flower-container {
+body .bestSellers .flowerContainer {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }
-body .best-sellers .flower-container .flower-item {
+body .bestSellers .flowerContainer a {
+  text-decoration: none;
+  color: rgb(40, 40, 40);
+}
+body .bestSellers .flowerContainer a .flower-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: fit-content;
-  padding: 20px;
+  padding: 0px;
   margin: 10px;
 }
-body .best-sellers .flower-container .flower-item img {
-  width: 200px;
-  transition: 300ms;
-}
-body .best-sellers .flower-container .flower-item .item-info {
+body .bestSellers .flowerContainer a .flower-item .itemInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body .best-sellers .flower-container .flower-item .item-info h4 {
+body .bestSellers .flowerContainer a .flower-item .itemInfo h4 {
   font-family: questa-grande, serif;
   font-size: 1.3rem;
 }
-body .best-sellers .flower-container .flower-item .item-info span {
+body .bestSellers .flowerContainer a .flower-item .itemInfo span {
   display: flex;
 }
-body .best-sellers .flower-container .flower-item .item-info .price, body .best-sellers .flower-container .flower-item .item-info .regular-price, body .best-sellers .flower-container .flower-item .item-info .sale-price {
+body .bestSellers .flowerContainer a .flower-item .itemInfo .price, body .bestSellers .flowerContainer a .flower-item .itemInfo .regularPrice, body .bestSellers .flowerContainer a .flower-item .itemInfo .salePrice {
   font-family: elza, sans-serif;
   font-size: 1.2rem;
   margin: 10px;
   font-weight: 400;
 }
-body .best-sellers .flower-container .flower-item .item-info .regular-price {
+body .bestSellers .flowerContainer a .flower-item .itemInfo .regularPrice {
   text-decoration: line-through;
 }
-body .best-sellers .flower-container .flower-item .item-info .sale-price {
+body .bestSellers .flowerContainer a .flower-item .itemInfo .salePrice {
   color: rgb(252, 46, 163);
 }
-body .best-sellers .flower-container .flower-item .item-info .buy-now {
+body .bestSellers .flowerContainer a .flower-item .itemInfo .buyNow {
   font-size: 1.1rem;
-}
-body .best-sellers .flower-container .flower-item:hover > img {
-  transform: scale(1.1);
+  color: #fff;
 }
 body footer {
   background-color: rgb(255, 251, 234);
   padding: 20px;
+  width: 100%;
 }
-body footer .footer-content {
+body footer .footerContent {
   max-width: 1000px;
   margin: auto;
 }
-body footer .footer-content .footer-nav {
+body footer .footerContent .footerNav {
   width: fit-content;
 }
-body footer .footer-content .footer-nav ul {
+body footer .footerContent .footerNav ul {
   list-style-type: none;
   border-right: 1px solid rgb(40, 40, 40);
   padding: 20px;
 }
-body footer .footer-content .footer-nav ul li {
+body footer .footerContent .footerNav ul li {
   margin: 10px 0;
 }
-body footer .footer-content .footer-nav ul li p {
+body footer .footerContent .footerNav ul li p {
   text-decoration: none;
   font-family: elza, sans-serif;
   color: rgb(40, 40, 40);
   font-weight: 800;
 }
-body footer .footer-content .footer-nav ul li a {
+body footer .footerContent .footerNav ul li a {
   text-decoration: none;
   font-family: elza, sans-serif;
   color: rgb(40, 40, 40);
   transition: 200ms;
 }
-body footer .footer-content .footer-nav ul li a:hover {
+body footer .footerContent .footerNav ul li a:hover {
   color: rgb(252, 46, 163);
 }
 
-.buy-now {
+.buyNow {
   background-color: rgb(252, 46, 163);
   padding: 10px 20px;
   color: white;
@@ -232,19 +312,57 @@ body footer .footer-content .footer-nav ul li a:hover {
   font-size: 1.3rem;
 }
 
-.buy-now:hover {
+.buyNow:hover {
   background-color: rgb(211, 38, 136);
 }
 
-@media only screen and (max-width: 600px) {
-  body .best-sellers .flower-container .flower-item {
-    flex-direction: row;
+@media only screen and (max-width: 750px) {
+  body header nav {
+    display: none;
   }
-  body .best-sellers .flower-container .flower-item img {
+  body header .hamburger {
+    display: flex;
+  }
+  body .heroContainer {
+    background-size: 400px;
+    background-position: bottom right;
+    align-items: flex-start;
+    padding-top: 75px;
+  }
+  body .heroContainer .hero {
+    width: 70%;
+    margin: auto;
+  }
+  body .heroContainer .hero h2 {
+    font-size: 2.3rem;
+  }
+  body .heroContainer .hero p {
+    font-size: 1rem;
+  }
+  body .heroContainer .hero .buyNow {
+    font-size: 1rem;
+  }
+  body .bestSellers .flowerContainer {
+    margin: none;
+  }
+  body .bestSellers .flowerContainer a .flowerItem {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  body .bestSellers .flowerContainer a .flowerItem img {
     width: 120px;
   }
-  body .best-sellers .flower-container .flower-item .item-info {
+  body .bestSellers .flowerContainer a .flowerItem .itemInfo {
     margin-left: 30px;
+  }
+  body .bestSellers .flowerContainer a .flowerItem .itemInfo .price {
+    font-size: 0.9rem;
+  }
+  body .bestSellers .flowerContainer a .flowerItem .itemInfo .buyNow {
+    font-size: 0.8rem;
+    min-width: 50px;
   }
 }
 

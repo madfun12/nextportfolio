@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+            
     <header>
         <h1>Florist Shop</h1>
         <nav>
             <ul>
                 <div class="dropdown">
                     <li><a href="">Occasions<i class="fa-solid fa-angle-down"></i></a></li>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-column">
+                    <div class="dropdownMenu">
+                        <div class="dropdownColumn">
                             <ul>
                                 <li><a href="">Birthday</a></li>
                                 <li><a href="">Anniversary</a></li>
@@ -35,64 +36,52 @@
                 <li><a href="">Help</a></li>
             </ul>
         </nav>
+        <div class="hamburger" onClick="toggleMobile">
+            <div class="getPattyStyle()"></div>
+        </div>
     </header>
-    <div class="hero-container">
-        <div class="outer-edge">
+    <div class="sideMenu">
+        <ul>
+            <li><a href="">Occasions</a></li>
+            <li><a href="">Flowers</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Help</a></li>
+        </ul>
+    </div>
+    <div class="heroContainer">
+        <div class="outerEdge">
             <div class="hero">
-                <h2>MAKE A WISH</h2>
+                <h2>Make a Wish</h2>
                 <p>Make their birthday one-of-a-kind with a unique bouquet just for them!</p>
-                <a href="" class="buy-now">Shop Birthday</a>
+                <a href="" class="buyNow">Shop Birthday</a>
             </div>
         </div>
     </div>
-    <div class="best-sellers">
+    <div class="bestSellers">
         <h2>Our Best Sellers</h2>
-        <div class="flower-container">
-            <div class="flower-item">
-                <img src="./assets/flowers1.webp" alt="">
-                <div class="item-info">
-                    <h4>Flower Title</h4>
-                    <span>
-                        <p class="price">$54.99</p>
-                    </span>
-                    <a href="" class="buy-now">Buy Now</a>
+        <div class="flowerContainer">
+            <a href="">
+                <div class="flower-item">
+                    <img src="./assets/flowers1.webp" alt="">
+                    <div class="itemInfo">
+                        <h4>Flower Title</h4>
+                        <span>
+                            <p class="price">$54.99</p>
+                        </span>
+                        <a href="" class="buyNow">Buy Now</a>
+                    </div>
                 </div>
-            </div>
-            <div class="flower-item">
-                <img src="./assets/flowers1.webp" alt="">
-                <div class="item-info">
-                    <h4>Flower Title</h4>
-                    <span>
-                        <p class="price">$54.99</p>
-                    </span>
-                    <a href="" class="buy-now">Buy Now</a>
-                </div>
-            </div>
-            <div class="flower-item">
-                <img src="./assets/flowers1.webp" alt="">
-                <div class="item-info">
-                    <h4>Flower Title</h4>
-                    <span>
-                        <p class="price">$54.99</p>
-                    </span>
-                    <a href="" class="buy-now">Buy Now</a>
-                </div>
-            </div>
-            <div class="flower-item">
-                <img src="./assets/flowers1.webp" alt="">
-                <div class="item-info">
-                    <h4>Flower Title</h4>
-                    <span>
-                        <p class="price">$54.99</p>
-                    </span>
-                    <a href="" class="buy-now">Buy Now</a>
-                </div>
-            </div>
+            </a>
+        </div>
+    </div>
+    <div class="categoryHolder">
+        <div class="category">
+            
         </div>
     </div>
     <footer>
-        <div class="footer-content">
-            <nav class="footer-nav">
+        <div class="footerContent">
+            <nav class="footerNav">
                 <ul>
                     <li><p>Shop</p></li>
                     <li><a href="">All Occasions</a></li>
@@ -104,5 +93,6 @@
             </nav>
         </div>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

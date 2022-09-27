@@ -3,22 +3,28 @@ $clean-text: elza, sans-serif;
 $accent: rgb(252, 46, 163);
 $accent-dark: rgb(211, 38, 136);
 .body{
-    background-color: rgb(255, 255, 255);
-
+    position: absolute;
+    width: 100%;
     header{
         display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
         align-items: center;
         justify-content: space-between;
         padding: 10px;
         z-index: 10;
-        border-bottom: 1px solid rgb(0, 0, 0);
-        background-color: rgb(187, 206, 187);
+        border-bottom: 1px solid rgb(235, 235, 235);
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 
         h1{
             color: rgb(40,40,40);
             font-family: $fancy-text;
             text-transform: uppercase;
             z-index: 10;
+            font-size: 1.8rem;
 
         }
         nav{
@@ -74,7 +80,7 @@ $accent-dark: rgb(211, 38, 136);
                     height: fit-content;
                     min-width: 250px;
                     position: absolute;
-                    top: 40px;
+                    top: 38px;
                     right: 0;
                     padding: 10px;
                     border-top: none;
@@ -114,6 +120,88 @@ $accent-dark: rgb(211, 38, 136);
             }
             
         }
+        .hamburger{
+            display: none;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+
+            .patty{
+                width: 30px;
+                background-color: rgb(40,40,40);
+                height: 2px;
+                position: relative;
+                transition: 200ms ease-in-out;
+            }
+            .pattyactive{
+                background-color: transparent;
+                height: 2px;
+                position: relative;
+                width: 30px;
+                transition: 200ms ease-in-out;
+            }
+            .pattyactive::before, .pattyactive::after{
+                content: '';
+                height: inherit;
+                width: inherit;
+                position: absolute;
+                background-color: rgb(40,40,40);
+                transition: 200ms ease-in-out;
+
+            }
+            .pattyactive::before{
+                transform: rotate(45deg);
+            }
+            .pattyactive::after{
+                transform: rotate(-45deg);
+            }
+            .patty::before,.patty::after{
+                content: '';
+                height: inherit;
+                width: inherit;
+                position: absolute;
+                transition: 200ms ease-in-out;
+                background-color: rgb(40,40,40);
+            }
+            .patty::before{
+                transform: translateY(7px);
+            }
+            .patty::after{
+                transform: translateY(-7px);
+            }
+        }
+    }
+
+    .sideMenu{
+        position: fixed;
+        width: 250px;
+        top: 61px;
+        right: 0;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: white;
+        height: 100%;
+        padding: 20px;
+        transition: 200ms;
+
+        ul{
+            list-style-type: none;
+            text-align: right;
+
+            li{
+                margin: 20px 0;
+
+                a{
+                    color: black;
+                    text-decoration: none;
+                    font-family: $fancy-text;
+                    font-size: 1.5rem;
+                }
+            }
+        }
     }
 
     .heroContainer{
@@ -123,9 +211,7 @@ $accent-dark: rgb(211, 38, 136);
         background-image: url(../public/template1/assets/flowerswhand.png);
         background-position: top right;
         background-repeat: no-repeat;
-        width: 100%;
         position: relative;
-        background-color: rgb(187, 206, 187);
         .hero{
             max-width: 500px;
             padding: 20px;
@@ -155,7 +241,12 @@ $accent-dark: rgb(211, 38, 136);
     }
 
     .bestSellers{
-        margin: 50px;
+        margin: 50px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         h2{
             text-align: center;
@@ -170,25 +261,13 @@ $accent-dark: rgb(211, 38, 136);
             flex-wrap: wrap;
             justify-content: center;
 
-            
-
-            a{
-                text-decoration: none;
-                color: rgb(40,40,40);
-
                 .flowerItem{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     width: fit-content;
-                    padding: 20px;
+                    padding: 0px;
                     margin: 10px;
-                    
-                    img{
-                        width: 200px;
-                        transition: 300ms;
-
-                    }
 
                     .itemInfo{
                         display: flex;
@@ -227,7 +306,6 @@ $accent-dark: rgb(211, 38, 136);
                         }
                     }
                 }
-            }
         }
     }
 
@@ -238,12 +316,15 @@ $accent-dark: rgb(211, 38, 136);
         .footerContent{
             max-width: 1000px;
             margin: auto;
+            display: flex;
+            height: 100%;
 
             .footerNav{
                 width: fit-content;
+                padding-right: 50px;
+                height: 100%;
                 ul{
                     list-style-type: none;
-                    border-right: 1px solid rgb(40,40,40);
                     padding: 20px;
 
 
@@ -298,10 +379,16 @@ $accent-dark: rgb(211, 38, 136);
         nav{
             display: none;
         }
+        .hamburger{
+            display: flex;
+        }
     }
 
     .heroContainer{
         background-size: 400px;
+        background-position: bottom right;
+        align-items: flex-start;
+        padding-top: 75px;
 
         .hero{
             width: 70%;
@@ -324,7 +411,7 @@ $accent-dark: rgb(211, 38, 136);
     .bestSellers{
 
         .flowerContainer{
-
+            margin: none;
             a{
                 .flowerItem{
                     flex-direction: row;
