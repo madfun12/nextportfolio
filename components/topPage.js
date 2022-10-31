@@ -26,7 +26,7 @@ export default function TopPage(props){
           <div className={mobileActive === false ? styles.patty : styles.pattyActive}></div>
         </div>
         </header>
-        {<div className={styles.sideMenu} style={{right: mobileActive ? '0' : '-200px'}}>
+        {<div className={styles.sideMenu} style={{right: mobileActive ? '0' : '-250px'}}>
           <ul className={styles.navholder}>
             <li className={styles.navitem}><Link href="/"><a style={router.pathname == "/" ? {color:'rgb(63, 156, 255)'} : {}}>Home</a></Link></li>
             <li className={styles.navitem}><Link href="/about"><a style={router.pathname == "/about" ? {color:'rgb(255, 0, 0)'} : {}}>About</a></Link></li>
