@@ -1,10 +1,9 @@
 
 .blogHolder{
     padding: 80px 0;
-    background-image: url('../public/dotbg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: radial-gradient(rgba(255, 255, 255, 0.064) 8%, transparent 8%);
+    background-position: 0% 0%;
+    background-size: 5vmin 5vmin;
     min-height: 100vh;
     background-color: rgb(26, 26, 26);
 
@@ -34,8 +33,13 @@
             box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
             cursor: pointer;
             width: 500px;
+            transition: 350ms;
             p{
                 margin: 10px 0;
+            }
+            &:hover{
+                background-color: rgb(246, 239, 210);
+                color: #323232;
             }
         }
     }
