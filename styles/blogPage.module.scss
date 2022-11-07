@@ -5,13 +5,15 @@ $backgroundColor: rgb(246, 239, 210);
     position: relative;
     background-color: $backgroundColor;
     background-attachment: fixed;
+    max-width: 100vw;
 
     .header{
-        background-color: transparent;
+        background-color: #323232;
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        right: 0;
+        max-width: 100%;
         height: 50px;
         padding: 10px;
         display: flex;
@@ -45,13 +47,12 @@ $backgroundColor: rgb(246, 239, 210);
             justify-content: center;
             width: 70px;
             height:70px;
-            margin-right: 40px;
             cursor: pointer;
 
             .patty{
                 width: 30px;
                 height: 2px;
-                background-color: #323232;
+                background-color: #ffffff;
                 position: relative;
                 transition: 300ms;
             }
@@ -59,7 +60,7 @@ $backgroundColor: rgb(246, 239, 210);
                 content:'';
                 width: 20px;
                 height: 2px;
-                background-color: #323232;
+                background-color: #ffffff;
                 position: absolute;
             }
             .patty::before{
@@ -71,7 +72,7 @@ $backgroundColor: rgb(246, 239, 210);
             .pattyActive{
                 width: 20px;
                 height: 2px;
-                background-color: #323232;
+                background-color: #ffffff;
                 position: relative;
                 transform: rotate(45deg);
                 transition: 300ms;
@@ -80,10 +81,9 @@ $backgroundColor: rgb(246, 239, 210);
                 content:'';
                 width: 20px;
                 height: 2px;
-                background-color: #323232;
+                background-color: #ffffff;
                 position: absolute;
                 transform: rotate(-90deg);
-
             }
         }
 
@@ -137,7 +137,10 @@ $backgroundColor: rgb(246, 239, 210);
     }
 
     .post{
-        padding: 50px 100px 50px 30px;
+        padding: 100px 50px;
+        @media only screen and (max-width:800px){
+            padding: 100px 20px;
+        }
 
         h1{
             font-size: 3rem;
@@ -165,6 +168,12 @@ $backgroundColor: rgb(246, 239, 210);
                 font-family: 'Roboto Mono', monospace;
                 text-align: center !important;
                 color: white;
+                @media only screen and (max-width: 800px){
+                    width: 100%;
+                    font-size: 20px;
+                    padding: 5px 10px;
+                    word-wrap: break-word;
+                }
             }
 
             ol{
