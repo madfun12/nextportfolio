@@ -2,26 +2,123 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Playfair+Display:ital,wght@0,400;1,700&display=swap");
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-rgb: 214, 219, 220;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-rgb: 12, 12, 12;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    background-color: rgb(var(--background-rgb));
+}
+
+.blog-post p {
+    margin-bottom: 1em;
+    font-size: 18px;
+}
+
+.blog-post a {
+    text-decoration: underline;
+    color: rgb(42, 138, 255);
+}
+
+.blog-post ul {
+    list-style-type: disc;
+    margin-bottom: 1em;
+}
+.blog-post ul li {
+    margin-left: 30px;
+}
+
+.blog-post h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 2em 0 1em 0;
+}
+.blog-post code {
+    background-color: #242632;
+    padding: 0.2em 0.5em;
+    border-radius: 8px;
+    width: fit-content;
+    font-family: "IBM Plex Mono", monospace;
+    border: 1px solid #4e4e4e;
+}
+
+.blog-post pre code {
+    display: block;
+    margin: 1em 0;
+}
+.blog-post blockquote blockquote {
+    position: relative;
+    background-color: rgb(60, 60, 60);
+    padding: 1em 0.5em 1em 1em;
+}
+.blog-post blockquote blockquote p {
+    margin-bottom: 0;
+}
+.blog-post blockquote blockquote::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    left: 0;
+    top: 0;
+    background-color: rgb(86, 103, 126);
+}
+.blog-post blockquote p strong {
+    background-color: rgba(251, 219, 130, 0.52);
+    display: block;
+    padding: 1.5em;
+    position: relative;
+    border-radius: 8px;
+    font-weight: 400;
+}
+.blog-post blockquote p strong::before {
+    content: "!";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 8px;
+    background-color: rgb(255, 115, 0);
+    display: grid;
+    place-items: center;
+}
+
+.blog-post blockquote p em {
+    background-color: rgba(207, 240, 255, 0.52);
+    display: block;
+    padding: 1.5em;
+    position: relative;
+    border-radius: 8px;
+    font-weight: 400;
+    font-style: normal;
+}
+.blog-post blockquote p em a {
+    text-decoration: underline;
+    color: rgb(255, 184, 41);
+}
+
+.blog-post blockquote p em::before {
+    content: "i";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 8px;
+    background-color: rgb(21, 46, 231);
+    display: grid;
+    place-items: center;
+    font-style: normal;
 }
