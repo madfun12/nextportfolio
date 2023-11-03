@@ -21,7 +21,7 @@ const Navbar = () => {
     ];
     return (
         <div className="flex items-center justify-between sticky top-0 w-full bg-[#121212] border-b border-b-neutral-800 z-10">
-            <a className="text-5xl font-bold p-4" href="/">
+            <a className="text-5xl font-bold p-4 tracking-tighter" href="/">
                 madfun
             </a>
             <ul className="hidden md:flex">
