@@ -20,8 +20,11 @@ const Navbar = () => {
         },
     ];
     return (
-        <div className="flex items-center justify-between sticky top-0 w-full bg-[#121212] border-b border-b-neutral-800 z-10">
-            <a className="text-5xl font-bold p-4 tracking-tighter" href="/">
+        <div className="flex items-center justify-between sticky top-0 w-full bg-light-bg dark:bg-dark-bg border-b border-b-neutral-800 z-10">
+            <a
+                className="text-5xl font-bold p-4 tracking-tighter dark:text-neutral-200"
+                href="/"
+            >
                 madfun
             </a>
             <ul className="hidden md:flex">
@@ -29,7 +32,7 @@ const Navbar = () => {
                     <li key={link.href}>
                         <a
                             href={link.href}
-                            className="p-4 text-neutral-400 hover:text-blue-500 transition"
+                            className="p-4 text-neutral-800 dark:text-neutral-400 hover:text-blue-700 dark:hover:text-blue-500 transition"
                         >
                             {link.name}
                         </a>

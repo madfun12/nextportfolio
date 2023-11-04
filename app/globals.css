@@ -4,19 +4,30 @@
 
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Playfair+Display:ital,wght@0,400;1,700&display=swap");
 
-:root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 12, 12, 12;
+body {
+    background-color: #d6dbdc;
 }
 
-body {
-    color: rgb(var(--foreground-rgb));
-    background-color: rgb(var(--background-rgb));
+.dark body {
+    background-color: #121212;
 }
 
 .blog-post p {
     margin-bottom: 1em;
     font-size: 18px;
+}
+.blog-post p,
+.blog-post h1,
+.blog-post h2,
+.blog-post li {
+    color: #121212;
+}
+
+.dark .blog-post p,
+.dark .blog-post h1,
+.dark .blog-post h2,
+.dark .blog-post li {
+    color: #fff;
 }
 
 .blog-post a {
@@ -39,16 +50,19 @@ body {
 }
 .blog-post code {
     background-color: #242632;
-    padding: 0.2em 0.5em;
-    border-radius: 8px;
     width: fit-content;
     font-family: "IBM Plex Mono", monospace;
     border: 1px solid #4e4e4e;
+    color: white;
 }
 
 .blog-post pre code {
     display: block;
     margin: 1em 0;
+    border-radius: 10px;
+    padding: 2em;
+    max-width: 100%;
+    overflow-x: scroll;
 }
 .blog-post blockquote blockquote {
     position: relative;
@@ -86,6 +100,7 @@ body {
     background-color: rgb(255, 115, 0);
     display: grid;
     place-items: center;
+    color: white;
 }
 
 .blog-post blockquote p em {
@@ -114,4 +129,5 @@ body {
     display: grid;
     place-items: center;
     font-style: normal;
+    color: white;
 }

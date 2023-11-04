@@ -19,10 +19,13 @@ const MobileMenu = ({ routes }: { routes: Route[] }) => {
                 onClick={toggleMenu}
                 role="button"
             >
-                <FiMenu className="text-white" size="32" />
+                <FiMenu
+                    className="text-neutral-800 dark:text-white"
+                    size="32"
+                />
             </div>
             <div
-                className={`md:hidden fixed w-72 top-0 bg-[#121212d1] h-screen backdrop-blur-md transition-[250ms] ${
+                className={`md:hidden fixed w-72 top-0 bg-[#e5e5e5d1] dark:bg-[#121212d1] h-screen backdrop-blur-md transition-[250ms] ${
                     isOpen ? "right-0" : "-right-72"
                 }`}
             >
@@ -31,7 +34,7 @@ const MobileMenu = ({ routes }: { routes: Route[] }) => {
                         <li key={link.href} className="h-fit m-4">
                             <a
                                 href={link.href}
-                                className="p-4 text-neutral-200 hover:text-blue-500 transition text-xl py-4"
+                                className="p-4 dark:text-neutral-200 hover:text-blue-500 transition text-xl py-4"
                             >
                                 {link.name}
                             </a>

@@ -17,8 +17,15 @@ const config: Config = {
                 sans: ["var(--font-geist-sans)"],
                 mono: ["var(--font-geist-mono)"],
             },
+            colors: {
+                "light-bg": "#d6dbdc",
+                "dark-bg": "#121212",
+                "dark-text": "#323232",
+                "light-text": "#fff",
+            },
         },
     },
     plugins: [],
+    darkMode: "class",
 };
 export default config;

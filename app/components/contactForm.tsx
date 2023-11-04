@@ -46,7 +46,7 @@ const ContactForm = () => {
             className="flex flex-col m-auto gap-4 max-w-lg mt-4 items-center justify-center"
         >
             <div className="flex flex-col w-full">
-                <label className="mb-2 text-neutral-200" htmlFor="name">
+                <label className="mb-2 dark:text-neutral-200" htmlFor="name">
                     Name (Required)
                 </label>
                 <input
@@ -61,7 +61,7 @@ const ContactForm = () => {
                 )}
             </div>
             <div className="flex flex-col w-full">
-                <label className="mb-2 text-neutral-200" htmlFor="email">
+                <label className="mb-2 dark:text-neutral-200" htmlFor="email">
                     Email (Required)
                 </label>
                 <input
@@ -77,7 +77,7 @@ const ContactForm = () => {
                 )}
             </div>
             <div className="flex flex-col w-full">
-                <label className="mb-2 text-neutral-200" htmlFor="phone">
+                <label className="mb-2 dark:text-neutral-200" htmlFor="phone">
                     Phone number
                 </label>
                 <input
@@ -88,7 +88,10 @@ const ContactForm = () => {
                 />
             </div>
             <div className="flex flex-col w-full">
-                <label className="mb-2 text-neutral-200" htmlFor="business">
+                <label
+                    className="mb-2 dark:text-neutral-200"
+                    htmlFor="business"
+                >
                     Business
                 </label>
                 <input
@@ -98,7 +101,7 @@ const ContactForm = () => {
                 />
             </div>
             <div className="flex flex-col w-full">
-                <label className="mb-2 text-neutral-200" htmlFor="subject">
+                <label className="mb-2 dark:text-neutral-200" htmlFor="subject">
                     Subject
                 </label>
                 <input
@@ -113,7 +116,7 @@ const ContactForm = () => {
                     sent
                         ? "bg-green-600"
                         : "bg-blue-800 hover:bg-blue-900 disabled:bg-blue-900"
-                } px-4 py-3 rounded-lg transition w-fit disabled:cursor-not-allowed min-w-[150px] text-center`}
+                } px-4 py-3 rounded-lg transition w-fit disabled:cursor-not-allowed min-w-[150px] text-center text-white`}
                 disabled={loading || sent}
             >
                 {loading ? (

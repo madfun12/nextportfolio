@@ -60,7 +60,7 @@ const Questions = ({ questions }: { questions: Question[] }) => {
             {confetti && <Confetti />}
             {formattedQuestions.map((question: any, index: number) => (
                 <div key={question.question}>
-                    <p className="mb-2">
+                    <p className="mb-2 dark:text-neutral-200">
                         {index + 1}. {decodeURIComponent(question.question)}
                     </p>
                     <ul className="mb-4 flex flex-wrap gap-4">
@@ -82,12 +82,12 @@ const Questions = ({ questions }: { questions: Question[] }) => {
                                         htmlFor={`question-${
                                             index + 1
                                         }-${answerIndex}`}
-                                        className={`py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-neutral-500 peer-focus-visible:outline peer-hover:border-neutral-500 transition peer-checked:bg-white peer-checked:text-black peer-checked:border-white cursor-pointer block whitespace-nowrap peer-disabled:cursor-not-allowed ${
+                                        className={`py-2 px-8 border-2 border-neutral-400 dark:text-neutral-200 dark:border-neutral-700 rounded-full peer-focus-visible:border-neutral-900 peer-hover:border-neutral-900 dark:peer-focus-visible:border-neutral-500 dark:peer-hover:border-neutral-500 peer-focus-visible:outline  transition peer-checked:bg-dark-bg peer-checked:text-white peer-checked:border-dark-bg dark:peer-checked:bg-white dark:peer-checked:text-black dark:peer-checked:border-white cursor-pointer block whitespace-nowrap peer-disabled:cursor-not-allowed ${
                                             !submitted
                                                 ? ""
                                                 : answer.correct
-                                                ? "!border-green-500"
-                                                : "!border-red-500"
+                                                ? "!border-green-600 dark:!border-green-500"
+                                                : "!border-red-600 dark:!border-red-500"
                                         }`}
                                     >
                                         {decodeURIComponent(answer.answer)}
@@ -100,7 +100,7 @@ const Questions = ({ questions }: { questions: Question[] }) => {
             ))}
             {!submitted && (
                 <button
-                    className="px-8 py-2 font-bold mx-auto bg-green-700 rounded-lg disabled:cursor-not-allowed"
+                    className="px-8 py-2 font-bold mx-auto bg-green-700 rounded-lg disabled:cursor-not-allowed text-white"
                     onClick={handleSubmit}
                     disabled={submitted}
                 >
@@ -108,7 +108,7 @@ const Questions = ({ questions }: { questions: Question[] }) => {
                 </button>
             )}
             {submitted && (
-                <p className="text-center font-bold text-xl my-4">
+                <p className="text-center font-bold text-xl my-4 dark:text-neutral-200">
                     You got
                     {` ${correct}/${questions.length} `}
                     correct
@@ -116,7 +116,7 @@ const Questions = ({ questions }: { questions: Question[] }) => {
             )}
             {submitted && (
                 <button
-                    className="px-8 py-2 font-bold mx-auto bg-blue-700 rounded-lg"
+                    className="px-8 py-2 font-bold mx-auto bg-blue-700 rounded-lg text-white"
                     onClick={triviaStore.restartGame}
                 >
                     Restart

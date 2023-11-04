@@ -8,24 +8,24 @@ export default function Home() {
         <>
             <MaxWrapper>
                 <div className="p-8 flex flex-col items-center justify-center ">
-                    <h1 className="text-center text-5xl sm:text-6xl font-bold tracking-tighter mb-6">
+                    <h1 className="text-center text-5xl sm:text-6xl font-bold tracking-tighter mb-6 dark:text-neutral-200">
                         Developer Extraordinaire
                     </h1>
-                    <p className=" max-w-2xl p-2 m-auto text-lg mb-4">
+                    <p className=" max-w-2xl p-2 m-auto text-lg mb-4 dark:text-neutral-200">
                         Hello, my name is Madison. I&apos;m a developer in
                         Guthrie, OK. I work on all sorts of different projects,
                         and have many hobbies and fascinations.
                     </p>
                     <a
                         href="/contact"
-                        className="bg-blue-800 px-4 py-3 rounded-lg hover:bg-blue-900 transition"
+                        className="bg-blue-800 px-4 py-3 rounded-lg hover:bg-blue-900 transition text-white"
                     >
                         Contact Me
                     </a>
                 </div>
             </MaxWrapper>
 
-            <section className="w-full bg-neutral-900 py-4">
+            <section className="w-full bg-[#00000009] dark:bg-neutral-900 py-4">
                 <MaxWrapper>
                     <SectionHeader title="about me" />
                     <Image
@@ -35,7 +35,7 @@ export default function Home() {
                         alt="A picture of me"
                         className="m-auto"
                     />
-                    <p className="text-lg m-auto p-4">
+                    <p className="text-lg m-auto p-4 dark:text-neutral-200">
                         My focus is learning as much as possible about software
                         engineering; I consider it a life-long journey. I&apos;m
                         primarily &quot;self-taught&quot; - meaning I read a lot
@@ -56,7 +56,7 @@ export default function Home() {
                     >
                         <AiFillInstagram
                             size={48}
-                            className="hover:text-neutral-500 transition"
+                            className="transition dark:text-neutral-200 hover:text-neutral-500"
                         />
                     </a>
                 </MaxWrapper>

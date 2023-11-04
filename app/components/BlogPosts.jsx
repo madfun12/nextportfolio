@@ -10,19 +10,21 @@ const BlogPosts = () => {
         return formattedDate;
     };
     return (
-        <div className="p-4 flex flex-col gap-4">
+        <div className="flex flex-col gap-4">
             {allPosts.map((post) => (
                 <a
                     key={post.id}
                     href={`/posts/${post.id}`}
-                    className="bg-neutral-900 border border-neutral-700 rounded-lg p-4 w-fit block relative sm:static"
+                    className="dark:bg-neutral-900 border border-neutral-700 rounded-lg p-4 w-fit block relative sm:static"
                 >
-                    <h3 className="font-bold text-lg flex items-center gap-4">
+                    <h3 className="font-bold text-lg flex items-center gap-4 dark:text-neutral-200">
                         {post.title}
-                        <BsArrowUpRightSquare className="absolute right-2 bottom-2 sm:static" />
+                        <BsArrowUpRightSquare className="absolute right-2 bottom-2 sm:static dark:text-neutral-200" />
                     </h3>
 
-                    <p>{getLongDate(post.date)}</p>
+                    <p className="dark:text-neutral-200">
+                        {getLongDate(post.date)}
+                    </p>
                 </a>
             ))}
         </div>

@@ -11,12 +11,14 @@ const Projects = () => {
                     href="/projects/trivia-game"
                     className="block p-4 border border-neutral-700 rounded-lg relative"
                 >
-                    <h2 className="font-bold text-2xl mb-2">Trivia Game</h2>
+                    <h2 className="font-bold text-2xl mb-2 dark:text-neutral-200">
+                        Trivia Game
+                    </h2>
                     <BsArrowUpRightSquare
-                        className="absolute right-2 top-2"
+                        className="absolute right-2 top-2 dark:text-neutral-200"
                         size={24}
                     />
-                    <p>
+                    <p className="dark:text-neutral-200">
                         This allows you to create a trivia game tailored to you.
                         Choose your options and see how sharp your trivia skills
                         are!

@@ -4,6 +4,7 @@ import { GeistSans, GeistMono } from "geist/font";
 import "./globals.css";
 import Navbar from "@/app/components/Navbar";
 import { Toaster } from "react-hot-toast";
+import DarkModeToggle from "./components/DarkModeToggle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,10 +19,11 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={GeistSans.className}>
+            <body className={`${GeistSans.className}`}>
                 <Toaster />
                 <Navbar />
-                <div className="">{children}</div>
+                <div>{children}</div>
+                <DarkModeToggle />
             </body>
         </html>
     );

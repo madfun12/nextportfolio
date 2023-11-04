@@ -1,4 +1,5 @@
 "use client";
+import SectionHeader from "@/app/components/sectionHeader";
 import useTriviaStore from "@/hooks/useTriviaApi";
 import { useState } from "react";
 import toast from "react-hot-toast";
@@ -66,12 +67,11 @@ const StartScreen = () => {
 
     return (
         <div className="">
-            <h1 className="text-3xl font-bold tracking-tight">
-                Welcome to the trivia game
-            </h1>
-            <p className="text-neutral-400 mb-4">
-                Select your options to start
-            </p>
+            <SectionHeader
+                title="Welcome to the trivia game"
+                subtitle="Select your options to begin"
+            />
+
             <p>Number of questions</p>
             <form className="flex flex-col" onSubmit={handleSubmit}>
                 <ul className="flex py-4 gap-4">
@@ -86,7 +86,7 @@ const StartScreen = () => {
                         />
                         <label
                             htmlFor="quantity-5"
-                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-500 transition peer-checked:!border-green-500 cursor-pointer whitespace-nowrap"
+                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-600 dark:peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-600 dark:peer-hover:border-blue-500 transition peer-checked:!border-green-600 dark:peer-checked:!border-green-500 cursor-pointer whitespace-nowrap dark:text-neutral-200"
                         >
                             5
                         </label>
@@ -102,7 +102,7 @@ const StartScreen = () => {
                         />
                         <label
                             htmlFor="quantity-10"
-                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-500 transition peer-checked:!border-green-500 cursor-pointer whitespace-nowrap"
+                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-600 dark:peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-600 dark:peer-hover:border-blue-500 transition peer-checked:!border-green-600 dark:peer-checked:!border-green-500 cursor-pointer whitespace-nowrap dark:text-neutral-200"
                         >
                             10
                         </label>
@@ -118,7 +118,7 @@ const StartScreen = () => {
                         />
                         <label
                             htmlFor="quantity-15"
-                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-500 transition peer-checked:!border-green-500 cursor-pointer whitespace-nowrap"
+                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-600 dark:peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-600 dark:peer-hover:border-blue-500 transition peer-checked:!border-green-600 dark:peer-checked:!border-green-500 cursor-pointer whitespace-nowrap dark:text-neutral-200"
                         >
                             15
                         </label>
@@ -141,7 +141,7 @@ const StartScreen = () => {
                         />
                         <label
                             htmlFor="multiple"
-                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-500 transition peer-checked:!border-green-500 cursor-pointer whitespace-nowrap"
+                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-600 dark:peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-600 dark:peer-hover:border-blue-500 transition peer-checked:!border-green-600 dark:peer-checked:!border-green-500 cursor-pointer whitespace-nowrap dark:text-neutral-200"
                         >
                             Multiple choice
                         </label>
@@ -161,7 +161,7 @@ const StartScreen = () => {
                         />
                         <label
                             htmlFor="truefalse"
-                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-500 transition peer-checked:!border-green-500 cursor-pointer whitespace-nowrap"
+                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-600 dark:peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-600 dark:peer-hover:border-blue-500 transition peer-checked:!border-green-600 dark:peer-checked:!border-green-500 cursor-pointer whitespace-nowrap dark:text-neutral-200"
                         >
                             True or false
                         </label>
@@ -180,7 +180,7 @@ const StartScreen = () => {
                         />
                         <label
                             htmlFor="easy"
-                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-500 transition peer-checked:!border-green-500 cursor-pointer whitespace-nowrap"
+                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-600 dark:peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-600 dark:peer-hover:border-blue-500 transition peer-checked:!border-green-600 dark:peer-checked:!border-green-500 cursor-pointer whitespace-nowrap dark:text-neutral-200"
                         >
                             Easy
                         </label>
@@ -196,7 +196,7 @@ const StartScreen = () => {
                         />
                         <label
                             htmlFor="medium"
-                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-500 transition peer-checked:!border-green-500 cursor-pointer whitespace-nowrap"
+                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-600 dark:peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-600 dark:peer-hover:border-blue-500 transition peer-checked:!border-green-600 dark:peer-checked:!border-green-500 cursor-pointer whitespace-nowrap dark:text-neutral-200"
                         >
                             Medium
                         </label>
@@ -212,7 +212,7 @@ const StartScreen = () => {
                         />
                         <label
                             htmlFor="hard"
-                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-500 transition peer-checked:!border-green-500 cursor-pointer whitespace-nowrap"
+                            className="py-2 px-8 border-2 border-neutral-700 rounded-full peer-focus-visible:border-blue-600 dark:peer-focus-visible:border-blue-500 peer-focus-visible:outline peer-hover:border-blue-600 dark:peer-hover:border-blue-500 transition peer-checked:!border-green-600 dark:peer-checked:!border-green-500 cursor-pointer whitespace-nowrap dark:text-neutral-200"
                         >
                             Hard
                         </label>
@@ -222,7 +222,7 @@ const StartScreen = () => {
                 <select
                     name="category"
                     id="category"
-                    className="bg-transparent border border-neutral-700 rounded-lg py-2 px-4 w-fit"
+                    className="bg-transparent border border-neutral-700 rounded-lg py-2 px-4 w-fit dark:text-neutral-200"
                     defaultValue="any"
                     onChange={handleChange}
                 >
@@ -235,7 +235,7 @@ const StartScreen = () => {
                     <option value="18">Computers</option>
                     <option value="21">Sports</option>
                 </select>
-                <button className="bg-green-700 px-8 py-2 w-fit mx-auto rounded-md font-bold text-xl mt-8 hover:bg-neutral-800 border border-green-700 hover:border-neutral-700 transition">
+                <button className="bg-green-700 px-8 py-2 w-fit mx-auto rounded-md font-bold text-xl mt-8 hover:bg-neutral-800 border border-green-700 hover:border-neutral-700 transition text-white">
                     Start
                 </button>
             </form>

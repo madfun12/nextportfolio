@@ -10,10 +10,12 @@ const BlogPost = async (req) => {
     return (
         <div className="p-4">
             <MaxWrapper>
-                <h1 className="text-2xl font-bold mb-4 md:text-4xl lg:text-5xl">
+                <h1 className="text-2xl font-bold mb-4 md:text-4xl lg:text-5xl dark:text-white">
                     {postData.title}
                 </h1>
-                <p className="text-neutral-400 mb-8 ">{formattedDate}</p>
+                <p className="text-neutral-600 dark:text-neutral-400 mb-8 ">
+                    {formattedDate}
+                </p>
                 <div
                     className="blog-post"
                     dangerouslySetInnerHTML={{
