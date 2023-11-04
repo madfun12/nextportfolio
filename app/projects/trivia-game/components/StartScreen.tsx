@@ -72,7 +72,7 @@ const StartScreen = () => {
                 subtitle="Select your options to begin"
             />
 
-            <p>Number of questions</p>
+            <p className="dark:text-white">Number of questions</p>
             <form className="flex flex-col" onSubmit={handleSubmit}>
                 <ul className="flex py-4 gap-4">
                     <li>
@@ -124,7 +124,9 @@ const StartScreen = () => {
                         </label>
                     </li>
                 </ul>
-                <p>Question Types (select one or both)</p>
+                <p className="dark:text-white">
+                    Question Types (select one or both)
+                </p>
                 <ul className="flex py-4 gap-4">
                     <li>
                         <input
@@ -167,7 +169,7 @@ const StartScreen = () => {
                         </label>
                     </li>
                 </ul>
-                <p>Difficulty</p>
+                <p className="dark:text-white">Difficulty</p>
                 <ul className="flex py-4 gap-4">
                     <li>
                         <input
@@ -218,7 +220,7 @@ const StartScreen = () => {
                         </label>
                     </li>
                 </ul>
-                <p className="mb-2">Category</p>
+                <p className="mb-2 dark:text-white">Category</p>
                 <select
                     name="category"
                     id="category"
