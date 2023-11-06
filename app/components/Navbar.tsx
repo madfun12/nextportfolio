@@ -1,4 +1,8 @@
+"use client";
+import { useTheme } from "next-themes";
+import { Sun, Moon } from "lucide-react";
 import MobileMenu from "./mobileMenu";
+import Button from "./Button";
 
 const Navbar = () => {
     const routes = [
@@ -19,6 +23,8 @@ const Navbar = () => {
             href: "/contact",
         },
     ];
+
+    const { theme, setTheme } = useTheme();
     return (
         <div className="flex items-center justify-between sticky top-0 w-full bg-light-bg dark:bg-dark-bg border-b border-b-neutral-800 z-10">
             <a
@@ -27,7 +33,7 @@ const Navbar = () => {
             >
                 madfun
             </a>
-            <ul className="hidden md:flex">
+            <ul className="hidden md:flex items-center px-2">
                 {routes.map((link) => (
                     <li key={link.href}>
                         <a
@@ -38,6 +44,18 @@ const Navbar = () => {
                         </a>
                     </li>
                 ))}
+                <li>
+                    <Button
+                        onClick={() =>
+                            theme === "dark"
+                                ? setTheme("light")
+                                : setTheme("dark")
+                        }
+                    >
+                        <Sun size={22} className="hidden dark:block" />
+                        <Moon size={22} className="block dark:hidden" />
+                    </Button>
+                </li>
             </ul>
             <MobileMenu routes={routes} />
         </div>

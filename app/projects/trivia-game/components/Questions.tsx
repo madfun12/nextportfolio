@@ -3,6 +3,7 @@ import { Question } from "./TriviaGameComponent";
 import useTriviaStore from "@/hooks/useTriviaApi";
 
 import Confetti from "react-confetti";
+import Button from "@/app/components/Button";
 
 const Questions = ({ questions }: { questions: Question[] }) => {
     const triviaStore: any = useTriviaStore();
@@ -86,8 +87,8 @@ const Questions = ({ questions }: { questions: Question[] }) => {
                                             !submitted
                                                 ? ""
                                                 : answer.correct
-                                                ? "!border-green-600 dark:!border-green-500"
-                                                : "!border-red-600 dark:!border-red-500"
+                                                ? "peer-checked:!bg-green-700 !border-green-700 dark:peer-checked:!bg-green-500 dark:peer-checked:!border-green-500 peer-[:not(:checked)]:!border-4"
+                                                : "peer-checked:!bg-red-700 peer-checked:!border-red-700 dark:peer-checked:!bg-red-500 dark:peer-checked:!border-red-500"
                                         }`}
                                     >
                                         {decodeURIComponent(answer.answer)}
@@ -115,12 +116,12 @@ const Questions = ({ questions }: { questions: Question[] }) => {
                 </p>
             )}
             {submitted && (
-                <button
-                    className="px-8 py-2 font-bold mx-auto bg-blue-700 rounded-lg text-white"
-                    onClick={triviaStore.restartGame}
+                <Button
+                    onClick={() => triviaStore.restartGame()}
+                    className="px-8 mx-auto"
                 >
                     Restart
-                </button>
+                </Button>
             )}
         </div>
     );

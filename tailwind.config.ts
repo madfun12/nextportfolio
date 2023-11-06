@@ -18,7 +18,7 @@ const config: Config = {
                 mono: ["var(--font-geist-mono)"],
             },
             colors: {
-                "light-bg": "#d6dbdc",
+                "light-bg": "#f6f6f6",
                 "dark-bg": "#121212",
                 "dark-text": "#323232",
                 "light-text": "#fff",

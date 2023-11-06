@@ -4,6 +4,7 @@ import { GeistSans, GeistMono } from "geist/font";
 import "./globals.css";
 import Navbar from "@/app/components/Navbar";
 import { Toaster } from "react-hot-toast";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +20,15 @@ export default function RootLayout({
     return (
         <html lang="en" className="dark">
             <body className={`${GeistSans.className}`}>
-                <Toaster />
-                <Navbar />
-                <div>{children}</div>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                >
+                    <Toaster />
+                    <Navbar />
+                    <div>{children}</div>
+                </ThemeProvider>
             </body>
         </html>
     );
