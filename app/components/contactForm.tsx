@@ -52,7 +52,7 @@ const ContactForm = () => {
                 <input
                     id="name"
                     {...register("name", { required: true })}
-                    className="border border-neutral-600 bg-transparent px-4 py-3 rounded-lg placeholder:text-neutral-300"
+                    className="border border-neutral-600 bg-transparent px-4 py-3 rounded-lg placeholder:text-neutral-300 text-white"
                 />
                 {errors.name && (
                     <span className="text-red-400 ml-2">
@@ -68,7 +68,7 @@ const ContactForm = () => {
                     id="email"
                     type="email"
                     {...register("email", { required: true })}
-                    className="border border-neutral-600 bg-transparent px-4 py-3 rounded-lg placeholder:text-neutral-300"
+                    className="border border-neutral-600 bg-transparent px-4 py-3 rounded-lg placeholder:text-neutral-300 text-white"
                 />
                 {errors.email && (
                     <span className="text-red-400 ml-2">
@@ -84,7 +84,7 @@ const ContactForm = () => {
                     id="phone"
                     type="tel"
                     {...register("phone")}
-                    className="border border-neutral-600 bg-transparent px-4 py-3 rounded-lg placeholder:text-neutral-300"
+                    className="border border-neutral-600 bg-transparent px-4 py-3 rounded-lg placeholder:text-neutral-300 text-white"
                 />
             </div>
             <div className="flex flex-col w-full">
@@ -97,7 +97,7 @@ const ContactForm = () => {
                 <input
                     id="business"
                     {...register("business")}
-                    className="border border-neutral-600 bg-transparent px-4 py-3 rounded-lg placeholder:text-neutral-300"
+                    className="border border-neutral-600 bg-transparent px-4 py-3 rounded-lg placeholder:text-neutral-300 text-white"
                 />
             </div>
             <div className="flex flex-col w-full">
@@ -107,7 +107,7 @@ const ContactForm = () => {
                 <input
                     id="subject"
                     {...register("subject")}
-                    className="border border-neutral-600 bg-transparent px-4 py-3 rounded-lg placeholder:text-neutral-300"
+                    className="border border-neutral-600 bg-transparent px-4 py-3 rounded-lg placeholder:text-neutral-300 text-white"
                 />
             </div>
             <button
