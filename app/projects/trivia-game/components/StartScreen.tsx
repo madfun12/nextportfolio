@@ -1,4 +1,5 @@
 "use client";
+import Button from "@/app/components/Button";
 import SectionHeader from "@/app/components/sectionHeader";
 import useTriviaStore from "@/hooks/useTriviaApi";
 import { useState } from "react";
@@ -228,18 +229,37 @@ const StartScreen = () => {
                     defaultValue="any"
                     onChange={handleChange}
                 >
-                    <option value="any">Any category</option>
-                    <option value="9">General Knowledge</option>
-                    <option value="11">Film</option>
-                    <option value="12">Music</option>
-                    <option value="14">Television</option>
-                    <option value="19">Mathematics</option>
-                    <option value="18">Computers</option>
-                    <option value="21">Sports</option>
+                    <option className="dark:bg-dark-bg" value="any">
+                        Any category
+                    </option>
+                    <option className="dark:bg-dark-bg" value="9">
+                        General Knowledge
+                    </option>
+                    <option className="dark:bg-dark-bg" value="11">
+                        Film
+                    </option>
+                    <option className="dark:bg-dark-bg" value="12">
+                        Music
+                    </option>
+                    <option className="dark:bg-dark-bg" value="14">
+                        Television
+                    </option>
+                    <option className="dark:bg-dark-bg" value="19">
+                        Mathematics
+                    </option>
+                    <option className="dark:bg-dark-bg" value="18">
+                        Computers
+                    </option>
+                    <option className="dark:bg-dark-bg" value="21">
+                        Sports
+                    </option>
                 </select>
-                <button className="bg-green-700 px-8 py-2 w-fit mx-auto rounded-md font-bold text-xl mt-8 hover:bg-neutral-800 border border-green-700 hover:border-neutral-700 transition text-white">
+                <Button
+                    onClick={() => handleSubmit}
+                    className="mx-auto my-4 px-8 text-lg"
+                >
                     Start
-                </button>
+                </Button>
             </form>
         </div>
     );
