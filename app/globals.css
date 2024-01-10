@@ -131,3 +131,23 @@ body {
     font-style: normal;
     color: white;
 }
+.scrolling-logos {
+    left: 0;
+    animation-name: scroll;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    overflow: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

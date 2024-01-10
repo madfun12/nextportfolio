@@ -116,7 +116,7 @@ const ContactForm = () => {
                     sent
                         ? "bg-green-600"
                         : "bg-blue-800 hover:bg-blue-900 disabled:bg-blue-900"
-                } px-4 py-3 rounded-lg transition w-fit disabled:cursor-not-allowed min-w-[150px] text-center dark:text-white`}
+                } px-4 py-3 rounded-lg transition w-fit disabled:cursor-not-allowed min-w-[150px] text-center text-white`}
                 disabled={loading || sent}
             >
                 {loading ? (
