@@ -73,7 +73,8 @@ function App() {
                         value={buttonText}
                         name="buttonText"
                         id="buttonText"
-                        className="rounded border border-neutral-300 p-2 m-auto block mb-3 bg-white text-black"
+                        className="rounded border border-neutral-300 p-2 m-auto block mb-3 bg-white text-black disabled:cursor-not-allowed"
+                        disabled={sent || loading}
                     />
                     <div className="flex justify-center gap-4 pb-4">
                         <div className="flex  flex-col items-center">
@@ -88,7 +89,8 @@ function App() {
                                 onChange={(event) => changeSettings(event)}
                                 value={style.backgroundColor}
                                 name="backgroundColor"
-                                className="color-picker rounded-lg border-neutral-800 appearance-none box-border cursor-pointer"
+                                className="color-picker rounded-lg border-neutral-800 appearance-none box-border cursor-pointer disabled:cursor-not-allowed"
+                                disabled={sent || loading}
                             />
                         </div>
                         <div className="flex  flex-col items-center">
@@ -103,7 +105,8 @@ function App() {
                                 onChange={(event) => changeSettings(event)}
                                 value={style.color}
                                 name="color"
-                                className="color-picker rounded-lg border-neutral-800 appearance-none box-border cursor-pointer"
+                                className="color-picker rounded-lg border-neutral-800 appearance-none box-border cursor-pointer disabled:cursor-not-allowed"
+                                disabled={sent || loading}
                             />
                         </div>
                     </div>
@@ -125,7 +128,8 @@ function App() {
                                     id="borderColor"
                                     name="borderColor"
                                     onChange={(event) => changeSettings(event)}
-                                    className="w-full cursor-pointer"
+                                    className="w-full cursor-pointer disabled:cursor-not-allowed"
+                                    disabled={sent || loading}
                                 />
                             </div>
                             <div className="p-2 border rounded-md border-neutral-300">
@@ -143,6 +147,8 @@ function App() {
                                     id="borderWidth"
                                     name="borderWidth"
                                     onChange={(event) => changeSettings(event)}
+                                    disabled={sent || loading}
+                                    className="disabled:cursor-not-allowed"
                                 />
                             </div>
                             <div className="p-2 border rounded-md border-neutral-300">
@@ -159,14 +165,16 @@ function App() {
                                     value={parseInt(style.borderRadius, 10)}
                                     id="borderRadius"
                                     name="borderRadius"
+                                    className="disabled:cursor-not-allowed"
                                     onChange={(event) => changeSettings(event)}
+                                    disabled={sent || loading}
                                 />
                             </div>
                         </div>
                         {!sent && (
                             <button
                                 onClick={() => handleSubmit()}
-                                className="block border rounded-lg my-4 mx-auto px-8 py-2 shadow transition hover:bg-neutral-100 hover:border-neutral-400 text-black"
+                                className="block border rounded-lg my-4 mx-auto px-8 py-2 shadow transition hover:bg-neutral-100 hover:border-neutral-400 text-black disabled:cursor-not-allowed"
                             >
                                 {loading ? (
                                     <AiOutlineLoading3Quarters
@@ -181,7 +189,10 @@ function App() {
                             </button>
                         )}
                         {sent && (
-                            <button className="block border rounded-lg my-4 mx-auto px-10 py-2 shadow transition hover:cursor-disabled bg-green-600 text-white">
+                            <button
+                                disabled
+                                className="block border rounded-lg my-4 mx-auto px-10 py-2 shadow transition cursor-not-allowed bg-green-600 text-white"
+                            >
                                 <BsCheck size={28} />
                             </button>
                         )}
