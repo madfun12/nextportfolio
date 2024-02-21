@@ -1,13 +1,15 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "./components/button";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { BsCheck } from "react-icons/bs";
+import { calculateLuminance, hexToRgb } from "@/lib/luminance";
 
 function App() {
     const [buttonText, setButtonText] = useState("Contact Us");
     const [loading, setLoading] = useState(false);
     const [sent, setSent] = useState(false);
+    const [contrast, setContrast] = useState(1);
     const [style, setStyle] = useState({
         backgroundColor: "#ffffff",
         color: "#000000",
@@ -33,8 +35,27 @@ function App() {
                 ...prevState,
                 [event.target.name]: event.target.value,
             }));
+            checkContrast();
         }
     };
+
+    const checkContrast = () => {
+        const { color, backgroundColor } = style;
+        const { r: textR, g: textG, b: textB } = hexToRgb(color);
+        const { r: bgR, g: bgG, b: bgB } = hexToRgb(backgroundColor);
+
+        const textLuminance = calculateLuminance(textR, textG, textB);
+        const backgroundLuminance = calculateLuminance(bgR, bgG, bgB);
+        if (textLuminance > backgroundLuminance) {
+            setContrast((textLuminance + 0.05) / (backgroundLuminance + 0.05));
+        } else {
+            setContrast((backgroundLuminance + 0.05) / (textLuminance + 0.05));
+        }
+    };
+
+    useEffect(() => {
+        checkContrast();
+    }, [style.color, style.backgroundColor]);
 
     const handleSubmit = () => {
         try {
@@ -109,7 +130,22 @@ function App() {
                                 disabled={sent || loading}
                             />
                         </div>
+                        <div className="flex flex-col items-center border rounded p-2">
+                            <p>Contrast</p>
+                            <p
+                                className={`m-auto ${
+                                    contrast < 4.5 ? "text-red-700" : ""
+                                }`}
+                            >{`${Math.round(contrast * 10) / 10}:1`}</p>
+                        </div>
                     </div>
+                    {contrast < 4.5 && (
+                        <p className="text-red-700 max-w-sm text-center">
+                            The text and background must have a contrast of
+                            4.5:1 or greater for web accessibility
+                        </p>
+                    )}
+
                     <div>
                         <label className="block text-black pb-1 text-center">
                             Change border settings
