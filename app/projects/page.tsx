@@ -26,24 +26,24 @@ const Projects = () => {
                     </p>
                 </a>
                 <a
-                    href="https://library20240110102252.azurewebsites.net"
+                    href="/sudokusolver/index.html"
                     className="block p-4 border border-neutral-700 rounded-lg relative mb-3"
                 >
                     <h2 className="font-bold text-2xl mb-2 dark:text-neutral-200">
-                        My Library
+                        Sudoku Solver
                     </h2>
                     <BsArrowUpRightSquare
                         className="absolute right-2 top-2 dark:text-neutral-200"
                         size={24}
                     />
                     <p className="dark:text-neutral-200">
-                        A web app hosted on azure that serves as an online
-                        catalogue for my home library.
-                        <br />
-                        An ASP.Net web application using MVC architecture and
-                        that connects to an azure hosted SQL database. It's a
-                        tech stack very similar to what many large enterprises
-                        might use.
+                        Very simple sudoku solving algorithm. It uses a
+                        backtracking method, which essentially starts from 1,
+                        goes through the puzzle until there are no more valid
+                        numbers, and then works backwards, increasing each spot
+                        until the puzzle is solved. Due to the ridiculous amount
+                        of different permutations possible with a sudoku puzzle,
+                        algorithms are usually pretty inefficient.
                     </p>
                 </a>
             </MaxWrapper>

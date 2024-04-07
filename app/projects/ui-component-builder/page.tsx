@@ -130,7 +130,7 @@ function App() {
                                 disabled={sent || loading}
                             />
                         </div>
-                        <div className="flex flex-col items-center border rounded p-2">
+                        <div className="flex flex-col items-center border rounded-md p-2">
                             <p>Contrast</p>
                             <p
                                 className={`m-auto ${

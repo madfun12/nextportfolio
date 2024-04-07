@@ -180,3 +180,9 @@ input[type="range"]::-moz-range-thumb {
     background: #ffffff;
     cursor: pointer;
 }
+
+.blog-post img {
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+}
