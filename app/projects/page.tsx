@@ -46,6 +46,26 @@ const Projects = () => {
                         algorithms are usually pretty inefficient.
                     </p>
                 </a>
+                <a
+                    href="/mandelbrot-explorer/index.html"
+                    className="block p-4 border border-neutral-700 rounded-lg relative mb-3"
+                >
+                    <h2 className="font-bold text-2xl mb-2 dark:text-neutral-200">
+                        Mandelbrot Explorer
+                    </h2>
+                    <BsArrowUpRightSquare
+                        className="absolute right-2 top-2 dark:text-neutral-200"
+                        size={24}
+                    />
+                    <p className="dark:text-neutral-200">
+                        A page that allows you to explore a graphical
+                        representation of the mandelbrot set. The mandelbrot set
+                        is an example of a fractal, a shape that contains
+                        incredibly complex and mesmerizingly beautiful recursive
+                        patterns that go on and on at smaller and smaller
+                        scales.
+                    </p>
+                </a>
             </MaxWrapper>
         </div>
     );

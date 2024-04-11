@@ -1,0 +1,23 @@
+body {
+    background-color: #000000;
+    font-family: monospace;
+}
+h1 {
+    color: #fff;
+    text-align: center;
+}
+
+canvas {
+    margin: auto;
+    display: block;
+}
+
+.iteration-inputs {
+    margin: auto;
+    width: fit-content;
+}
+
+.iteration-inputs h3 {
+    color: #fff;
+    text-align: center;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mandelbrot Explorer</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <h1>Mandelbrot Set Explorer</h1>
+            <canvas width="400" height="400"></canvas>
+            <div class="iteration-inputs">
+                <h3>Iterations</h3>
+                <input
+                    type="range"
+                    min="100"
+                    max="1000"
+                    step="100"
+                    id="iterationRange"
+                />
+                <input type="text" value="" id="iterationText" />
+            </div>
+            <script src="script.js"></script>
+        </main>
+    </body>
+</html>
