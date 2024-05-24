@@ -37,7 +37,7 @@ const pixelX = map(x, 0, canvas.width, -2, 2); // -2 at x=0
 const pixelY = map(y, 0, canvas.height, -2, 2); // -2 at y=0
 ```
 
-Notice that this will mean that going up on the Y axis is actually going to negative values instead of positive like on a normal two dimensional Cartesian plane. This is a just a byproduct of moving through the canvas backwards vertically relative to the Cartesian plane.
+Notice that this will mean that going up on the Y axis is actually going to negative values instead of positive like on a normal two dimensional Euclidean plane. This is a just a byproduct of moving through the canvas backwards vertically relative to the Euclidean plane.
 
 So, with our coordinate values, we can calculate whether or not our pixel is in the set. Before we can calculate this, we need to set a maximum number of iterations that we're going to run on each pixel. This number is very important to the detail of our end result, but we'll get to that later. For now, we're going to set `maxIterations` to 100. After that's defined, we call `isInMandelbrotSet` with our pixelX and pixelY values:
 
@@ -58,6 +58,8 @@ const isInMandelbrotSet = (pixelX, pixelY) => {
 ```
 
 You can see above that the equations for determining if a point (x, y) is in the Mandelbrot set are x{n} = x{n-1}^2 - y{n-1}^2 + x and y{n} = 2(x{n-1})(y{n-1}) + y. We test this for some number of iterations, in our case it's the value of `maxIterations`. x^2 + y^2 gets to be 4 or higher, we know that the value is no longer bounded and will quickly shoot off towards infinity. If we get to our maximum number of iterations, as far as we can tell the value is in the Mandelbrot set. A higher number of iterations will give us more accuracy, and thus a more detailed image. My explorer includes a couple of inputs that allow you to change the maximum number of iterations.
+
+![Picture showing the detail difference between 100 and 200 iterations](/iteration_difference.png)
 
 We test this for every pixel on the canvas. You might notice that instead of returning a boolean, `isInMandelbrotSet` returns the number of iterations that were run before we either became unbounded or reached the maximum number of iterations. This is done so that we can assign a color value to the corresponding pixel. In my case I used this formula:
 
