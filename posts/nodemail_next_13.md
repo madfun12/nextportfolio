@@ -1,6 +1,6 @@
 ---
 title: "How to Use Nodemailer with NextJS 13"
-date: "11-01-2023"
+date: "11-01-23"
 ---
 
 Recently, I've been working on updating my site to use the app router system that was introduced in Next 13. I'm still not decided if I preferred the old page structure, but I definitely prefer the new way of getting server side data and displaying it on the page. Gone are the days of getServerSideProps() and dealing with everything that came with it and it's siblings.

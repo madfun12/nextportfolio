@@ -1,6 +1,6 @@
 ---
 title: "52 Projects Week 2: Mandelbrot Explorer"
-date: "04-11-2024"
+date: "04-11-24"
 ---
 
 Last week, I built the sudoku solver algorithm after wrestling with procrastination and fear of failing. I was so excited to have finished it and for it to work so well, that I felt very confident going into this next project and wanted to try something that has fascinated me since I learned about it - a program that allows you to explore the [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set).

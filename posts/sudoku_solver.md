@@ -1,6 +1,6 @@
 ---
 title: "52 Projects Week 1: Sudoku Solver"
-date: "04-06-2024"
+date: "04-06-24"
 ---
 
 I recently started a goal to complete a new coding project a week. I decided that I would jump in by building something I hadn't had any real experience with - a sudoku solver program. I failed the goal of completing it in a week; it ended up taking me 2 weeks to complete. Not because I was stumped and working on it non-stop, but because I kept procrastinating.
