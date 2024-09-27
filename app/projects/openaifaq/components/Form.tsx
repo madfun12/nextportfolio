@@ -15,6 +15,7 @@ import OpenAI from "openai";
 import { categoryInfo, shopInfo } from "../data/sampleData";
 import { Exception } from "sass";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 interface formProps {
   setFAQs: Dispatch<SetStateAction<FAQ[]>>;
@@ -61,6 +62,7 @@ const Form: React.FC<formProps> = () => {
         question: false,
         answer: false,
       });
+      toast.error("Error getting a response from the AI overlord");
       throw new Error(`Error getting Open AI response: ${error}`);
     }
   };
@@ -88,6 +90,7 @@ const Form: React.FC<formProps> = () => {
         question: false,
         answer: false,
       });
+      toast.error("Error getting a response from the AI overlord");
       throw new Error(`Error getting Open AI response: ${error}`);
     }
   };
