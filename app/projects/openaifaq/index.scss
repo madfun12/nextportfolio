@@ -17,6 +17,9 @@
   }
   button {
     cursor: pointer;
+    &:disabled {
+      cursor: not-allowed;
+    }
   }
   .form-wrapper {
     background-color: #e8e8e8;
@@ -190,6 +193,51 @@
       }
       .answer {
         margin-top: 10px;
+      }
+    }
+  }
+  .modal-holder {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .modal-container {
+      border: 1px solid rgb(204, 204, 204);
+      border-radius: 10px;
+      padding: 30px 20px;
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        margin-bottom: 0px;
+        line-height: 20px;
+      }
+      h3 {
+        font-size: 18px;
+        color: #444444;
+      }
+      .modal-buttons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 20px;
+        button {
+          background-color: #000;
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 10px;
+          &.affirm {
+            background-color: #fff;
+            color: #000;
+            border: 2px solid #000;
+          }
+        }
       }
     }
   }
