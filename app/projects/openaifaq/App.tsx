@@ -1,22 +1,19 @@
-import { useState } from "react";
 import FAQList from "./components/FAQList";
 import Form from "./components/Form";
-import { FAQ } from "./types/FAQ";
-import { sampleData } from "./data/sampleData";
-import FAQContext, { FAQProvider } from "./contexts/FAQContext";
+import { FAQProvider } from "./contexts/FAQContext";
+import { FormSettingsContextProvider } from "./contexts/formSettingsContext";
 
 const App = () => {
-  const updateFAQ = () => {
-    // takes an index
-  };
-  return (
-    <div className="ai-faq">
-      <FAQProvider>
-        <Form />
-        <FAQList />
-      </FAQProvider>
-    </div>
-  );
+    return (
+        <div className="ai-faq">
+            <FAQProvider>
+                <FormSettingsContextProvider>
+                    <Form />
+                </FormSettingsContextProvider>
+                <FAQList />
+            </FAQProvider>
+        </div>
+    );
 };
 
 export default App;
