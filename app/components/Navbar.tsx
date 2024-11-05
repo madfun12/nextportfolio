@@ -3,6 +3,7 @@ import { useTheme } from "next-themes";
 import { Sun, Moon } from "lucide-react";
 import MobileMenu from "./mobileMenu";
 import Button from "./Button";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
     const routes = [
@@ -24,7 +25,12 @@ const Navbar = () => {
         },
     ];
 
+    const pathname = usePathname();
+
     const { theme, setTheme } = useTheme();
+    if (pathname === "/projects/openaifaq") {
+        return null;
+    }
     return (
         <div className="flex items-center justify-between sticky top-0 w-full bg-light-bg dark:bg-dark-bg border-b border-b-neutral-800 z-10">
             <a
