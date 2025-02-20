@@ -257,9 +257,10 @@
         top: 0;
         backdrop-filter: blur(3px);
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         transition: 300ms;
+        z-index: 20;
 
         .modal-container {
             border: 1px solid rgb(204, 204, 204);
@@ -267,6 +268,8 @@
             padding: 30px 20px;
             animation: drop-in 500ms ease-in-out;
             box-shadow: 0px 3px 15px #00000033;
+            background-color: #fff;
+            margin-top: 30px;
 
             @keyframes drop-in {
                 0% {

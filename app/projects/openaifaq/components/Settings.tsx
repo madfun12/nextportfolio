@@ -41,7 +41,7 @@ const Settings: React.FC = () => {
             {expanded && (
                 <Modal>
                     <h2>Prompt Settings</h2>
-                    <h3>Make some changes to get the perfect response</h3>
+                    <h3>Fine Tune to get the perfect response</h3>
 
                     <div>
                         <label>Length of reponse</label>
