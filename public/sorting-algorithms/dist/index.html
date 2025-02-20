@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title></title>
+        <link href="css/style.css" rel="stylesheet" />
+        <title>Sorting Algorithms</title>
+    </head>
+    <body>
+        <h1>Sorting Algorithms</h1>
+        <p>
+            There are many ways to sort values in a data structure in computer
+            science. There are several very common algorithms that take
+            different approaches towards solving this problem; some are much
+            faster than others. Click the button below to generate 150 random
+            numbers and see how each algorithm works.
+        </p>
+        <button id="generateRandoms">Generate Random Values</button>
+
+        <div class="algorithms">
+            <h2>Now lets see different ways to sort the values</h2>
+            <canvas id="visualizer" width="300" height="300"></canvas>
+            <div class="algorithms" style="display: none">
+                <h3>Select an algorithm</h3>
+                <button id="bubble">Bubble Sort</button>
+                <button id="merge">Merge Sort</button>
+            </div>
+        </div>
+        <button id="reset" disabled>Reset</button>
+        <script src="js/index.js"></script>
+    </body>
+</html>

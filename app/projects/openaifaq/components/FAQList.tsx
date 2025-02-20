@@ -1,47 +1,97 @@
-import { useState } from 'react';
-import FAQItem from './FAQItem';
-import { useFAQ } from '../hooks/useFAQ';
+import { useState } from "react";
+import FAQItem from "./FAQItem";
+import { useFAQ } from "../hooks/useFAQ";
+import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import { FAQ } from "../types/FAQ";
 
 const FAQList = () => {
     const { faqs, setFAQs } = useFAQ();
+    const grid = faqs.length;
 
-    const [draggedIndex, setDraggedIndex] = useState<any>(null);
+    const reorder = (list: FAQ[], startIndex: number, endIndex: number) => {
+        const result = Array.from(list);
+        const [removed] = result.splice(startIndex, 1);
+        result.splice(endIndex, 0, removed);
 
-    // Start dragging: store the index of the dragged item
-    const handleDragStart = (index: number) => {
-        setDraggedIndex(index);
+        return result;
     };
+    const getItemStyle = (isDragging: boolean, draggableStyle: any) => ({
+        // some basic styles to make the items look a bit nicer
+        userSelect: "none",
+        padding: grid * 2,
+        margin: `0 0 ${grid}px 0`,
 
-    // Drag over: prevent default to allow drop
-    const handleDragOver = (e: any, index: number) => {
-        e.preventDefault();
-    };
+        // change background colour if dragging
+        background: isDragging ? "lightgreen" : "grey",
 
-    // Drop: reorder the FAQs
-    const handleDrop = (dropIndex: number) => {
-        const updatedFAQs = [...faqs];
-        const [draggedFAQ] = updatedFAQs.splice(draggedIndex, 1);
-        updatedFAQs.splice(dropIndex, 0, draggedFAQ);
-        setFAQs(updatedFAQs);
-        setDraggedIndex(null);
-    };
+        // styles we need to apply on draggables
+        ...draggableStyle,
+    });
 
+    const getListStyle = (isDraggingOver: boolean) => ({
+        background: isDraggingOver ? "lightblue" : "lightgrey",
+        padding: grid,
+        width: 250,
+    });
+
+    function onDragEnd(result: any) {
+        if (!result.destination) {
+            return;
+        }
+
+        if (result.destination.index === result.source.index) {
+            return;
+        }
+
+        const orderedFAQs = reorder(
+            faqs,
+            result.source.index,
+            result.destination.index
+        );
+
+        setFAQs(orderedFAQs);
+    }
     return (
         <div className="faq-list-wrapper">
-            <h3>For Additional Information, Read Our Frequently Asked Questions Below</h3>
-            <ul className="faq-list">
-                {faqs.map((faq, index) => (
-                    <FAQItem
-                        key={index}
-                        index={index}
-                        question={faq.question}
-                        answer={faq.answer}
-                        onDrag={() => handleDragStart(index)}
-                        onDragOver={(event: any) => handleDragOver(event, index)}
-                        onDrop={() => handleDrop(index)}
-                    />
-                ))}
-            </ul>
+            <h3>
+                For Additional Information, Read Our Frequently Asked Questions
+                Below
+            </h3>
+            <DragDropContext onDragEnd={onDragEnd}>
+                <Droppable droppableId="list">
+                    {(provided) => (
+                        <div
+                            ref={provided.innerRef}
+                            {...provided.droppableProps}
+                            className="faq-list"
+                        >
+                            {faqs.map((faq, index) => (
+                                <Draggable
+                                    key={index}
+                                    index={index}
+                                    draggableId={`id-${index}`}
+                                >
+                                    {(provided) => (
+                                        <div
+                                            ref={provided.innerRef}
+                                            {...provided.draggableProps}
+                                            {...provided.dragHandleProps}
+                                        >
+                                            <FAQItem
+                                                question={faq.question}
+                                                answer={faq.answer}
+                                                index={index}
+                                            />
+                                        </div>
+                                    )}
+                                </Draggable>
+                            ))}
+
+                            {provided.placeholder}
+                        </div>
+                    )}
+                </Droppable>
+            </DragDropContext>
         </div>
     );
 };

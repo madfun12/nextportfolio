@@ -13,8 +13,6 @@ import { useFormSettings } from "../contexts/formSettingsContext";
 const Settings: React.FC = () => {
     const [expanded, setExpanded] = useState(false);
     const { settings, setSettings } = useFormSettings();
-    console.log(settings);
-
     const handleChange = (event: ChangeEvent) => {
         const { name, value } = event.target as HTMLInputElement;
         setSettings((prevState) => ({
