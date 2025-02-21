@@ -28,7 +28,10 @@ const Navbar = () => {
     const pathname = usePathname();
 
     const { theme, setTheme } = useTheme();
-    if (pathname === "/projects/openaifaq") {
+    if (
+        pathname === "/projects/openaifaq" ||
+        pathname === "/projects/ui-component-builder"
+    ) {
         return null;
     }
     return (
