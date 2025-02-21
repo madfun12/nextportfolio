@@ -39,12 +39,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, index }) => {
                     <p>{question}</p>
                     <DownCaret color="#454545" />
                 </button>
-                <div
-                    style={{
-                        cursor: "move",
-                    }}
-                    className="drag-icon"
-                >
+                <div className="drag-icon">
                     <Arrows color="#454545" />
                 </div>
                 <button
