@@ -1,6 +1,5 @@
 import MaxWrapper from "@/app/components/maxWrapper";
 import { getPostData } from "@/lib/posts";
-import { useParams } from "next/navigation";
 
 const BlogPost = async (req) => {
     const params = req.params;

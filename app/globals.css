@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Playfair+Display:ital,wght@0,400;1,700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Playfair+Display:ital,wght@0,400;1,700&display=swap");
 
 body {
     background-color: #f6f6f6;
@@ -185,4 +185,98 @@ input[type="range"]::-moz-range-thumb {
     margin: auto;
     width: 100%;
     max-width: 400px;
+}
+
+/* Retro CRT terminal portfolio (see app/components/crt) */
+@keyframes desk-hum {
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.68;
+    }
+}
+@keyframes crt-blink {
+    0%,
+    49% {
+        opacity: 1;
+    }
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes crt-flicker {
+    0% {
+        opacity: 0.96;
+    }
+    8% {
+        opacity: 0.9;
+    }
+    12% {
+        opacity: 0.97;
+    }
+    20% {
+        opacity: 0.93;
+    }
+    25% {
+        opacity: 0.98;
+    }
+    43% {
+        opacity: 0.95;
+    }
+    50% {
+        opacity: 0.99;
+    }
+    60% {
+        opacity: 0.93;
+    }
+    72% {
+        opacity: 0.97;
+    }
+    88% {
+        opacity: 0.92;
+    }
+    100% {
+        opacity: 0.96;
+    }
+}
+@keyframes crt-jitter {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 0.35px);
+    }
+}
+@keyframes crt-scan-roll {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+@keyframes crt-power {
+    0% {
+        transform: scale(1, 0.004);
+        opacity: 0;
+        filter: brightness(4);
+    }
+    35% {
+        transform: scale(1, 0.006);
+        opacity: 1;
+        filter: brightness(4);
+    }
+    55% {
+        transform: scale(1, 0.02);
+        filter: brightness(2.5);
+    }
+    100% {
+        transform: scale(1, 1);
+        opacity: 1;
+        filter: brightness(1);
+    }
 }
